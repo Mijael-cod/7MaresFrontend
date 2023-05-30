@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CocineroComponent } from './cocinero/cocinero.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CocineroComponent
+  ],
   imports: [
     CommonModule
   ]
