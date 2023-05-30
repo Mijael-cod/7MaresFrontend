@@ -11,7 +11,9 @@
 .login-box {
 	width: 320px;
 	height: 420px;
-	background: #000;
+	background: #DEB17C;
+	opacity: 0.7;
+	border-radius: 35px;
 	color: #fff;
 	top: 50%;
 	left: 50%;
@@ -26,6 +28,7 @@
 	height: 100px;
 	border-radius: 50%;
 	position: absolute;
+	border: 2px solid #DEB17C;
 	top: -50px;
 	left: calc(50% - 50px);
 }
@@ -34,7 +37,9 @@
 	margin: 0;
 	padding: 0 0 20px;
 	text-align: center;
-	font-size: 22px;
+	font-size: 25px;
+	color: rgb(0, 0, 0) !important;
+	font-weight: bold;
 }
 
 .login-box label{
@@ -42,6 +47,7 @@
 	padding: 0;
 	font-weight: bold;
 	display: block;
+	color: #000;
 }
 
 .login-box input{
@@ -49,13 +55,16 @@
 	margin-bottom: 20px;
 }
 
-.login-box input[type="text"],
+/* .login-box input[type="text"],
 .login-box input[type="password"]{
-	border: none;
+	border: 1px solid #000000;
+	background-color: #fff;
+	border-color: #000;
+	border-radius: 30px;
 	border-bottom: 1px solid #fff;
 	background: transparent;
 	outline: none;
 	height: 40px;
-	color: #fff;
+	color: black;
 	font-size: 16px;
-}
+} */
