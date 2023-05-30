@@ -68,3 +68,34 @@
 	color: black;
 	font-size: 16px;
 } */
+
+.space{
+	border-radius: 20px;
+}
+
+.login-box a{
+	margin-top: -5px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	color: black;
+}
+
+.campo-t{
+	border-radius: 40px !important;
+}
+
+.campo-i{
+	border-radius: 20px;
+	background-color: white;
+	border-color: black;
+}
+
+.boton-ingresar{
+
+	background-color: #fff !important;
+	color: black !important;
+	height: 40px;
+	width: 150px;
+
+}

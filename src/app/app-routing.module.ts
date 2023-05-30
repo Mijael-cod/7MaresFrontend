@@ -8,6 +8,8 @@ import { MeseroComponent } from './pages/mesero/mesero.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LoginComponent } from './auth/login/login.component';
+import { RegistrarComponent } from './auth/registrar/registrar.component';
+import { PincodeComponent } from './auth/pincode/pincode.component';
 
 const routes: Routes = [
 
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path: 'header', component:HeaderComponent},
   {path: 'sidebar', component:SidebarComponent},
   {path: 'login', component:LoginComponent},
+  {path: 'registrar', component:RegistrarComponent},
+  {path: 'pin-code', component:PincodeComponent},
 
 ];
 
