@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { PincodeComponent } from './pincode/pincode.component';
+import { RecuperarcontraComponent } from './recuperarcontra/recuperarcontra.component';
+import { ActualizacontraComponent } from './actualizacontra/actualizacontra.component';
 
 
 
@@ -10,7 +12,9 @@ import { PincodeComponent } from './pincode/pincode.component';
   declarations: [
     LoginComponent,
     RegistrarComponent,
-    PincodeComponent
+    PincodeComponent,
+    RecuperarcontraComponent,
+    ActualizacontraComponent
   ],
   imports: [
     CommonModule

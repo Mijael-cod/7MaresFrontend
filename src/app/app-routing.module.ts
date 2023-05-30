@@ -10,6 +10,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistrarComponent } from './auth/registrar/registrar.component';
 import { PincodeComponent } from './auth/pincode/pincode.component';
+import { RecuperarcontraComponent } from './auth/recuperarcontra/recuperarcontra.component';
+import { ActualizacontraComponent } from './auth/actualizacontra/actualizacontra.component';
 
 const routes: Routes = [
 
@@ -23,6 +25,8 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'registrar', component:RegistrarComponent},
   {path: 'pin-code', component:PincodeComponent},
+  {path: 'recuperarcontra', component:RecuperarcontraComponent},
+  {path: 'actualizarcontra', component:ActualizacontraComponent},
 
 ];
 

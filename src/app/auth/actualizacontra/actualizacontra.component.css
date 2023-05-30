@@ -1,0 +1,107 @@
+.body {
+	margin: 0;
+	padding: 0;
+	/* background: url(../img/logo7mares.jpg) no-repeat center top; */
+	background-color: antiquewhite;
+	background-size: cover;
+	font-family: sans-serif;
+	height: 100vh;
+}
+
+.login-box {
+	width: 520px;
+	height: 470px;
+	background: #DEB17C;
+	opacity: 0.7;
+	border-radius: 35px;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+}
+
+.login-box .avatar{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	border: 2px solid #DEB17C;
+	top: -50px;
+	left: calc(50% - 50px);
+}
+
+.login-box h1{
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 25px;
+	color: rgb(0, 0, 0) !important;
+	font-weight: bold;
+}
+
+.login-box label{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	display: block;
+	color: #000;
+}
+
+.login-box input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+/* .login-box input[type="text"],
+.login-box input[type="password"]{
+	border: 1px solid #000000;
+	background-color: #fff;
+	border-color: #000;
+	border-radius: 30px;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: black;
+	font-size: 16px;
+} */
+
+.space{
+	border-radius: 20px;
+}
+
+.login-box a{
+	margin-top: -5px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	color: black;
+}
+
+.campo-t{
+	border-radius: 40px !important;
+}
+
+.campo-i{
+	border-radius: 20px;
+	background-color: white;
+	border-color: black;
+}
+
+.boton-ingresar{
+
+	background-color: #fff !important;
+	color: black !important;
+	height: 40px;
+	width: 150px;
+
+}
+
+.campo-pin{
+    height: 80px;
+    margin: 5px;
+    border-radius: 20px;
+}
