@@ -7,6 +7,7 @@ import { CocineroComponent } from './pages/cocinero/cocinero.component';
 import { MeseroComponent } from './pages/mesero/mesero.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [
 
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'cocinero', component:CocineroComponent},
   {path: 'mesero', component:MeseroComponent},
   {path: 'header', component:HeaderComponent},
-  {path: 'sidebar', component:SidebarComponent}
+  {path: 'sidebar', component:SidebarComponent},
+  {path: 'login', component:LoginComponent},
 
 ];
 
