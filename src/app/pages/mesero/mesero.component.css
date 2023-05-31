@@ -102,3 +102,21 @@
 .btn-2{
     background-color: #3FB785 !important;
 }
+
+.iconos{
+    display: flex ;
+    justify-content: start;
+    margin: 15px;
+    margin-left: 25px !important;
+    font-size: 20px;
+    
+}
+
+.iconos2{
+    display: flex ;
+    justify-content: end;
+    margin-top: -34px;
+    margin-right: 22px !important;
+    font-size: 20px;
+    
+}
