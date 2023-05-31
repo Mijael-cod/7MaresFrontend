@@ -152,10 +152,34 @@
 				</div>
 				<div class="card m-1 caja-new">
 					<div class="card-body d-flex justify-content-center">
-						<a href="/mesero"><img src="assets/img/agregar_categoria.png" width="120" height="110" alt=""></a>
+						<a data-bs-toggle="modal" data-bs-target="#exampleModal" href="/mesero"><img
+								src="assets/img/agregar_categoria.png" width="120" height="110" alt=""></a>
 					</div>
 				</div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title fs-5 txt-c" id="exampleModalLabel">Agregar Categoria</h1>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+								<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+							</div>
+							<div class="modal-footer boton-new">
+								<button type="button" class="btn btn-danger bt-n btn-1" data-bs-dismiss="modal">Salir</button>
+								<button type="button" class="btn btn-success bt-n btn-2">Guardar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
+
+
 
 
 
@@ -163,7 +187,8 @@
 		<div class="col-4 col-sm-5 col-md-4 mt-4 bg-light">
 			<div class="d-flex mt-2">
 				<a class="navbar-brand" href="/mesero">
-					<img src="assets/img/perfil_categoria.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
+					<img src="assets/img/perfil_categoria.png" alt="" width="50" height="50"
+						class="d-inline-block align-text-top">
 				</a>
 			</div>
 			<hr>

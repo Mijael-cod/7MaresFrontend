@@ -78,3 +78,27 @@
     width: 250px !important;
 
 }
+
+.txt-c{
+
+    margin-left: 150px;
+}
+
+.boton-new{
+    display: flex !important;
+    justify-content: center;
+}
+
+.bt-n{
+    width: 110px;
+    border-radius: 20px;
+    
+}
+
+.btn-1{
+    background-color: #DD1C1C !important;
+}
+
+.btn-2{
+    background-color: #3FB785 !important;
+}
