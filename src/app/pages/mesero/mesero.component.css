@@ -80,7 +80,6 @@
 }
 
 .txt-c{
-
     margin-left: 150px;
 }
 
@@ -96,11 +95,11 @@
 }
 
 .btn-1{
-    background-color: #DD1C1C !important;
+    background-color: #3FB785 !important;
 }
 
 .btn-2{
-    background-color: #3FB785 !important;
+    background-color: #DD1C1C !important;
 }
 
 .iconos{
@@ -119,4 +118,30 @@
     margin-right: 22px !important;
     font-size: 20px;
     
+}
+
+.iconos3{
+    display: flex ;
+    justify-content: end;
+    margin: 15px;
+    margin-left: 470px !important;
+    font-size: 20px;
+    
+}
+
+.iconos4{
+    display: flex ;
+    justify-content: end;
+    margin-top: -34px;
+    margin-right: 60px !important;
+    font-size: 20px;
+    
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.txt-e{
+    margin-left: 50px;
 }
