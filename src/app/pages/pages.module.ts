@@ -9,7 +9,7 @@ import { CocineroComponent } from './cocinero/cocinero.component';
     CocineroComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ]
 })
 export class PagesModule { }

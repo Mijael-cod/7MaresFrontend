@@ -1,0 +1,15 @@
+.color-white {
+    color: white;
+}
+
+.color-nav {
+    background-color: #7CC5E0;
+}
+
+.nav-pills li a:hover {
+    background-color: blue;
+}
+
+.nav-item .form-select {
+    margin-top: 10px;
+}

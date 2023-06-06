@@ -1,1 +1,83 @@
-<p>cajero works!</p>
+<nav class="navbar navbar-expand-lg  color-nav">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/mesero">
+			<img src="assets/img/logo7mares.jpg" alt="" width="50" height="50" class="d-inline-block align-text-top">
+		</a>
+		<a class="navbar-brand color-white" href="/mares">Mesero</a>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			</ul>
+			<form class="d-flex" role="search">
+				<div class="d-flex">
+					<a class="navbar-brand color-white mt-1" href="/mesero">Lucia Tiravanti</a>
+					<a class="navbar-brand" href="/mesero">
+						<img src="assets/img/avatar.png" alt="" width="50" height="40"
+							class="d-inline-block align-text-top">
+					</a>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="d-flex flex-column justify-content-between col-auto bg-dark min-vh-100"><!-- col-md-4 col-lg-3 -->
+			<div>
+				<a class="text-white text-decoration-none d-flex align-items-center ms-4" role="button">
+					<span class="fs-5">
+						Sidemenu
+					</span>
+				</a>
+				<ul class="nav nav-pills flex-column mt-2 mt-sm-0" id="menu">
+					<li class="nav-item">
+						<a href="" class="nav-link text-white" aria-current="page">
+							<i class="fa fa-guage"></i>
+							<span class="ms-2">Dashboard</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="nav-link text-white" aria-current="page">
+							<i class="fa fa-house"></i>
+							<span class="ms-2">Home</span>
+						</a>
+					</li>
+					<li class="nav-item disabled">
+						<a href="#sidemenu" data-bs-toggle="collapse" class="nav-link text-white" aria-current="page">
+							<i class="fa fa-table"></i>
+							<span class="ms-2">Products</span>
+						</a>
+						<ul class="nav collapse ms-1 " id="sidemenu" data-bs-parent="#menu">
+							<li class="nav-item">
+								<a href="" class="nav-link" href="" aria-current="page">Item 1</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link" href="">Item 2</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link text-white" aria-current="page">
+									<i class="fa fa-users"></i>
+									<span class="ms-2">Customers</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<div class="dropdown open p-3">
+					<a class="btn border-none outline-none dropdown-toggle" type="button" id="triggerId"
+						data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="fa fa-user"></i>
+						<span>User</span>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="triggerId">
+						<button class="dropdown-item" href="#">Profile</button>
+						<button class="dropdown-item" href="#">Settings</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
