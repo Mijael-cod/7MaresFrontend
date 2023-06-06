@@ -7,7 +7,7 @@
 }
 
 .nav-pills li a:hover {
-    background-color: blue;
+    background-color: rgb(66, 66, 243);
 }
 
 .nav-item .form-select {
