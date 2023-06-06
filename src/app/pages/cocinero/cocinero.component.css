@@ -1,0 +1,79 @@
+.color-white{
+    color: white;
+}
+
+.color-nav{
+    background-color: #7CC5E0;
+}
+
+.body-cocina{
+    margin-top: 10px;
+}
+.cocina-pedidos{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    margin-left: 2px;
+
+}
+
+.caja-1{
+    border:solid 1px;
+    border-radius: 10px;
+    height: 310px;
+}
+
+@media (max-width: 768px) {
+    /* Estilos específicos para pantallas más pequeñas */
+    .cocina-pedidos{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1rem;
+        margin-left: 2px;
+        
+    
+    }
+    
+    .caja-1{
+        border:solid 1px;
+        border-radius: 10px;
+        height: 200px;
+    }
+
+  }
+  
+  /* Estilos para pantallas medianas */
+  @media (min-width: 768px) and (max-width: 992px) {
+    /* Estilos específicos para pantallas medianas */
+    .cocina-pedidos{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1rem;
+        margin-left: 2px;
+    
+    }
+    
+    .caja-1{
+        border:solid 1px;
+        border-radius: 10px;
+        height: 250px;
+    }
+  }
+  
+  /* Estilos para pantallas más grandes */
+  @media (min-width: 992px) {
+    /* Estilos específicos para pantallas más grandes */
+    .cocina-pedidos{
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        gap: 1rem;
+        margin-left: 2px;
+    
+    }
+    
+    .caja-1{
+        border:solid 1px;
+        border-radius: 10px;
+        height: 310px;
+    }
+  }
