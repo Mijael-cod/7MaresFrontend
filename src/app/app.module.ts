@@ -10,6 +10,7 @@ import { VPrincipalComponent } from './pages/vistas/v-principal/v-principal.comp
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import { Mesero2Component } from './pages/mesero2/mesero2.component';
 
 
 @NgModule({
@@ -18,9 +19,10 @@ import { RouterModule } from '@angular/router';
     AdminComponent,
     CajeroComponent,
     MeseroComponent,
+    Mesero2Component,
     VPrincipalComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
