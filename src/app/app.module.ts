@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminComponent } from './pages/admin/admin.component';
@@ -11,7 +10,6 @@ import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { Mesero2Component } from './pages/mesero2/mesero2.component';
-
 
 @NgModule({
   declarations: [
@@ -27,7 +25,7 @@ import { Mesero2Component } from './pages/mesero2/mesero2.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
