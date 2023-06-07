@@ -13,6 +13,7 @@ import { PincodeComponent } from './auth/pincode/pincode.component';
 import { RecuperarcontraComponent } from './auth/recuperarcontra/recuperarcontra.component';
 import { ActualizacontraComponent } from './auth/actualizacontra/actualizacontra.component';
 import { VPrincipalComponent } from './pages/vistas/v-principal/v-principal.component';
+import { Mesero2Component } from './pages/mesero2/mesero2.component';
 
 const routes: Routes = [
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'recuperarcontra', component:RecuperarcontraComponent},
   {path: 'actualizarcontra', component:ActualizacontraComponent},
   {path: 'v-principal', component:VPrincipalComponent},
+  {path: 'mesero2', component:Mesero2Component},
 
 ];
 
