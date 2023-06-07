@@ -20,7 +20,7 @@ import { RouterModule } from '@angular/router';
     MeseroComponent,
     VPrincipalComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

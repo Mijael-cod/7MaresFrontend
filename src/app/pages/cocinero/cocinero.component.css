@@ -1,79 +1,62 @@
-.color-white{
+.color-white {
     color: white;
 }
 
-.color-nav{
+.color-nav {
     background-color: #7CC5E0;
 }
+.sidedbar{
 
-.body-cocina{
+}
+
+.fondoSidebar {
+    background-color: #E0E0E0;
+}
+
+.nav-pills li a:hover {
+    background-color: rgb(41, 175, 41);
+}
+
+.nav-item .form-select {
     margin-top: 10px;
 }
+.element {
+    overflow: hidden;
+  }
+
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la pista */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del pulgar */
+    border-radius: 4px; /* Radio de borde del pulgar */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color del pulgar al pasar el cursor por encima */
+  }
+
+
 .cocina-pedidos{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 1rem;
-    margin-left: 2px;
 
 }
 
-.caja-1{
-    border:solid 1px;
-    border-radius: 10px;
-    height: 310px;
-}
 
-@media (max-width: 768px) {
-    /* Estilos específicos para pantallas más pequeñas */
-    .cocina-pedidos{
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 1rem;
-        margin-left: 2px;
-        
-    
-    }
-    
-    .caja-1{
-        border:solid 1px;
-        border-radius: 10px;
-        height: 200px;
-    }
 
+@media (max-width: 768px) {    
+    
   }
   
-  /* Estilos para pantallas medianas */
   @media (min-width: 768px) and (max-width: 992px) {
-    /* Estilos específicos para pantallas medianas */
-    .cocina-pedidos{
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 1rem;
-        margin-left: 2px;
     
-    }
-    
-    .caja-1{
-        border:solid 1px;
-        border-radius: 10px;
-        height: 250px;
-    }
+   
   }
-  
-  /* Estilos para pantallas más grandes */
   @media (min-width: 992px) {
-    /* Estilos específicos para pantallas más grandes */
-    .cocina-pedidos{
-        display: grid;
-        grid-template-columns: auto auto auto ;
-        gap: 1rem;
-        margin-left: 2px;
     
-    }
-    
-    .caja-1{
-        border:solid 1px;
-        border-radius: 10px;
-        height: 310px;
-    }
+   
   }
