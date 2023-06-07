@@ -5,9 +5,6 @@
 .color-nav {
     background-color: #7CC5E0;
 }
-.sidedbar{
-
-}
 
 .fondoSidebar {
     background-color: #E0E0E0;
@@ -20,9 +17,7 @@
 .nav-item .form-select {
     margin-top: 10px;
 }
-.element {
-    overflow: hidden;
-  }
+
 
 ::-webkit-scrollbar {
     width: 8px; /* Ancho de la barra de desplazamiento */
@@ -40,12 +35,6 @@
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555; /* Color del pulgar al pasar el cursor por encima */
   }
-
-
-.cocina-pedidos{
-
-}
-
 
 
 @media (max-width: 768px) {    
