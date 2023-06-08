@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Mesero2Component } from './mesero2.component';
+import { RecibidosComponent } from './recibidos.component';
 
-describe('Mesero2Component', () => {
-  let component: Mesero2Component;
-  let fixture: ComponentFixture<Mesero2Component>;
+describe('RecibidosComponent', () => {
+  let component: RecibidosComponent;
+  let fixture: ComponentFixture<RecibidosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Mesero2Component ]
+      declarations: [ RecibidosComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Mesero2Component);
+    fixture = TestBed.createComponent(RecibidosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

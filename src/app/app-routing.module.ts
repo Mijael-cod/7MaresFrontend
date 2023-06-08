@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './pages/admin/admin.component';
-import { CocineroComponent } from './pages/cocinero/cocinero.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -14,7 +13,6 @@ import { PagesRoutingModule } from './pages/pages-routing.module';
 const routes: Routes = [
   { path: '', redirectTo: 'principal-panel/vista-publica', pathMatch: 'full' },
   { path: 'admin', component: AdminComponent },
-  { path: 'cocinero', component: CocineroComponent },
   { path: 'header', component: HeaderComponent },
   { path: 'sidebar', component: SidebarComponent },
   { path: 'login', component: LoginComponent },
