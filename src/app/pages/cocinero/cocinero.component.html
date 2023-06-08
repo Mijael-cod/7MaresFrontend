@@ -1,66 +1,339 @@
 <nav class="navbar navbar-expand-lg  color-nav">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/mesero">
-            <img src="assets/img/logo7mares.jpg" alt="" width="50" height="50" class="d-inline-block align-text-top">
-        </a>
-        <a class="navbar-brand color-white" href="/mares">Cocinero</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            </ul>
-            <form class="d-flex" role="search">
-                <div class="d-flex">
-                    <a class="navbar-brand color-white mt-1" href="/mesero">Lucia Tiravanti</a>
-                    <a class="navbar-brand" href="/mesero">
-                        <img src="assets/img/avatar.png" alt="" width="40" height="40"
-                            class="d-inline-block align-text-top">
-                    </a>
-                </div>
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/mesero">
+			<img src="assets/img/logo7mares.jpg" alt="" width="50" height="50" class="d-inline-block align-text-top">
+		</a>
+		<a class="navbar-brand color-white" href="/mares">Cocinero</a>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			</ul>
+			<form class="d-flex" role="search">
+				<div class="d-flex">
+					<a class="navbar-brand color-white mt-1" href="/mesero">Lucia Tiravanti</a>
+					<a class="navbar-brand" href="/mesero">
+						<img src="assets/img/avatar.png" alt="" width="40" height="40"
+							class="d-inline-block align-text-top">
+					</a>
+				</div>
 
-            </form>
-        </div>
-    </div>
+			</form>
+		</div>
+	</div>
 </nav>
 
-<div class="container-fluid body-cocina">
-    <div class="row">
-        <div class="col-md-2 p-3 bg-light m-1 p-1" style="height: 100vh;">
-            <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
-                style="width: 100%;">
-                <svg class="bi pe-none me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-                <span class="fs-4">PEDIDO</span>
-            </a>
-            <hr>
-            <ul class="nav nav-pills flex-column mb-auto">
-
-                <li>
-                    <a href="#" class="nav-link link-dark">
-                        <svg class="bi pe-none me-2" width="16" height="16">
-                        </svg>
-                        Comidas Calientes
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link link-dark">
-                        <svg class="bi pe-none me-2" width="16" height="16">
-                        </svg>
-                        Comidas Frias
-                    </a>
-                </li>
-            </ul>
-            <hr>
-        </div>
-        <div class="col-md-10 row cocina-pedidos">
-            <div class="caja-1"></div>
-            <div class="caja-1"></div>
-            <div class="caja-1"></div>
-            <div class="caja-1"></div>  
-            <div class="caja-1"></div>
-            <div class="caja-1"></div>
-            <div class="caja-1"></div>
-            <div class="caja-1"></div> 
-            <div class="caja-1"></div>  
-        </div>
-    </div>    
+<div class="container-fluid p-3 fondoSidebar">
+	<div class="row ">
+		<div class="d-flex flex-column justify-content-between col-auto bg-white border rounded min-vh-100 sidebar">
+			<!-- col-md-4 col-lg-3 -->
+			<div class="mt-4">
+				<a class="text-dark d-none d-sm-inline text-decoration-none d-flex align-items-center ms-4"
+					role="button">
+					<span class="fs-5">
+						<strong>PEDIDOS</strong>
+					</span>
+				</a>
+				<hr class="text-dark d-none d-sm-block">
+				<ul class="nav nav-pills flex-column mt-2 mt-sm-0 " id="menu1">
+					<li class="nav-item my-sm-1 my-2 disabled">
+						<a href="#sidepedidos1" data-bs-toggle="collapse"
+							class="nav-link text-dark text-center text-sm-start" aria-current="page">
+							<i class="fa-solid fa-bowl-food"></i>
+							<span class="ms-2 d-none d-sm-inline">Comidas Calientes </span>
+							<i class="fa fa-caret-down"></i>
+						</a>
+						<ul class="nav collapse ms-1 flex-column" id="sidepedidos1" data-bs-parent="#pedido1">
+							<li class="nav-item">
+								<a href="" class="nav-link text-dark" href="" aria-current="page">
+									<i class="fa-solid fa-clipboard-list"></i> Recibidos
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link text-dark" href="">
+									<i class="fa-solid fa-list-check"></i> Listos
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item my-sm-1 my-2 disabled">
+						<a href="#sidepedidos2" data-bs-toggle="collapse"
+							class="nav-link text-dark text-center text-sm-start" aria-current="page">
+							<i class="fa-solid fa-bowl-food"></i>
+							<span class="ms-2 d-none d-sm-inline">Comidas Frias </span>
+							<i class="fa fa-caret-down"></i>
+						</a>
+						<ul class="nav collapse ms-1 flex-column" id="sidepedidos2" data-bs-parent="#pedido2">
+							<li class="nav-item">
+								<a href="" class="nav-link text-dark" href="" aria-current="page">
+									<i class="fa-solid fa-clipboard-list"></i> Recibidos
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link text-dark" href="">
+									<i class="fa-solid fa-list-check"></i> Listos
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<div class="dropdown open p-3">
+					<a class="btn border-none outline-none text-dark dropdown-toggle" type="button" id="triggerId"
+						data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="fa fa-user"></i>
+						<span class="ms-1 d-none d-sm-inline">Youserl</span>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="triggerId">
+						<button class="dropdown-item" href="#">Profile</button>
+						<button class="dropdown-item" href="#">Settings</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=" d-flex justify-content-center align-items-center col-md-10 row cocina-pedidos overflow-auto">
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Manuel Merino, mesa 1
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						1 Pollo Saltado
+					</div>
+					<div class="col-md-12">
+						2 Papa Rellena
+					</div>
+					<div class="col-md-12 d-flex justify-content-center align-items-center p-3">
+						<button class="btn btn-success col-md-3">Listo</button>
+					</div>
+				</div>
+			</div>
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Manuel Sanchez, mesa 4
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						3 Tequeño
+					</div>					
+					<div class="col-md-12 d-flex justify-content-center align-items-center p-3">
+						<button class="btn btn-success col-md-3">Listo</button>
+					</div>
+				</div>
+			</div>
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Makki Aliaga, mesa 2
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						1 Milanesa de pollo
+					</div>
+					<div class="col-md-12">
+						1 Leche de trige
+					</div>
+					<div class="col-md-12 d-flex justify-content-center align-items-center p-3">
+						<button class="btn btn-success col-md-3">Listo</button>
+					</div>
+				</div>
+			</div>
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Segundo Meza, mesa 12
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						3 Chicharron de pescado
+					</div>
+					<div class="col-md-12">
+						1 Chaufa de pescado
+					</div>
+					<div class="col-md-12">
+						1 Leche de tigre
+					</div>
+					<div class="col-md-12">
+						2 Jarra de chicha
+					</div>
+					<div class="col-md-12">
+						2 Lomo saltado 
+					</div>
+					<div class="col-md-12">
+						1 Chaufa de pollo
+					</div>
+					<div class="col-md-12">
+						1 Ceviche
+					</div>
+					<div class="col-md-12">
+						2 Jarra de Limonada
+					</div>
+					<div class="col-md-12">
+						1 Yuca Frita
+					</div>
+					<div class="col-md-12 d-flex justify-content-center align-items-center p-3">
+						<button class="btn btn-success col-md-3">Listo</button>
+					</div>
+				</div>
+			</div>
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Manuel Merino, mesa 1
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						1 Pollo Saltado
+					</div>
+					<div class="col-md-12">
+						2 Papa Rellena
+					</div>					
+				</div>
+				<div class="col-md-12 d-flex justify-content-center align-items-center border-top border-dark bg-light">
+					Entregado
+				</div>
+			</div>
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Rut Poma, mesa 10	
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						1 Tequeño
+					</div>		
+				</div>
+				<div class="col-md-12 d-flex justify-content-center align-items-center border-top border-dark bg-light">
+					Entregado
+				</div>
+			</div>	
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Manuel Sanchez, mesa 4
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						3 Tequeño
+					</div>					
+					<div class="col-md-12 d-flex justify-content-center align-items-center p-3">
+						<button class="btn btn-success col-md-3">Listo</button>
+					</div>
+				</div>
+			</div>
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Makki Aliaga, mesa 2
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						1 Milanesa de pollo
+					</div>
+					<div class="col-md-12">
+						1 Leche de trige
+					</div>
+					<div class="col-md-12 d-flex justify-content-center align-items-center p-3">
+						<button class="btn btn-success col-md-3">Listo</button>
+					</div>
+				</div>
+			</div>
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Segundo Meza, mesa 12
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						3 Chicharron de pescado
+					</div>
+					<div class="col-md-12">
+						1 Chaufa de pescado
+					</div>
+					<div class="col-md-12">
+						1 Leche de tigre
+					</div>
+					<div class="col-md-12">
+						2 Jarra de chicha
+					</div>
+					<div class="col-md-12">
+						2 Lomo saltado 
+					</div>
+					<div class="col-md-12">
+						1 Chaufa de pollo
+					</div>
+					<div class="col-md-12">
+						1 Ceviche
+					</div>
+					<div class="col-md-12">
+						2 Jarra de Limonada
+					</div>
+					<div class="col-md-12">
+						1 Yuca Frita
+					</div>
+					<div class="col-md-12 d-flex justify-content-center align-items-center p-3">
+						<button class="btn btn-success col-md-3">Listo</button>
+					</div>
+				</div>
+			</div>
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Manuel Sanchez, mesa 4
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						3 Tequeño
+					</div>					
+					<div class="col-md-12 d-flex justify-content-center align-items-center p-3">
+						<button class="btn btn-success col-md-3">Listo</button>
+					</div>
+				</div>
+			</div>
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Makki Aliaga, mesa 2
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						1 Milanesa de pollo
+					</div>
+					<div class="col-md-12">
+						1 Leche de trige
+					</div>
+					<div class="col-md-12 d-flex justify-content-center align-items-center p-3">
+						<button class="btn btn-success col-md-3">Listo</button>
+					</div>
+				</div>
+			</div>
+			<div class="caja-1 border border-2 border-dark rounded col-md-3 m-3 bg-white">
+				<div class="caja-header d-flex align-items-center justify-content-center p-3 border-bottom border-dark">
+					Segundo Meza, mesa 12
+				</div>
+				<div class="caja-body row p-3">
+					<div class="col-md-12">
+						3 Chicharron de pescado
+					</div>
+					<div class="col-md-12">
+						1 Chaufa de pescado
+					</div>
+					<div class="col-md-12">
+						1 Leche de tigre
+					</div>
+					<div class="col-md-12">
+						2 Jarra de chicha
+					</div>
+					<div class="col-md-12">
+						2 Lomo saltado 
+					</div>
+					<div class="col-md-12">
+						1 Chaufa de pollo
+					</div>
+					<div class="col-md-12">
+						1 Ceviche
+					</div>
+					<div class="col-md-12">
+						2 Jarra de Limonada
+					</div>
+					<div class="col-md-12">
+						1 Yuca Frita
+					</div>
+					<div class="col-md-12 d-flex justify-content-center align-items-center p-3">
+						<button class="btn btn-success col-md-3">Listo</button>
+					</div>
+				</div>
+			</div>					
+		</div>
+	</div>
 </div>
