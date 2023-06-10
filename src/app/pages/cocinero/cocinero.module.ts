@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { CocineroRoutingModule } from './cocinero-routing.module';
 import { PedidosComponent } from './pedidos/pedidos.component';
+import { ComidasCalientesModule } from './comidas_calientes/comidas-calientes.module';
+import { ComidasFriasModule } from './comidas_frias/comidas-frias.module';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { PedidosComponent } from './pedidos/pedidos.component';
   ],
   imports: [
     CommonModule,
-    CocineroRoutingModule
+    CocineroRoutingModule,
+    ComidasCalientesModule,
+    ComidasFriasModule
   ]
 })
 export class CocineroModule { }

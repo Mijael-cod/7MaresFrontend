@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ListosComponent } from './listos/listos.component';
+import { RecibidosComponent } from './recibidos/recibidos.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'listos-frio', component:ListosComponent, title: "Listos Frio"},
+  { path: 'recibidos-frio', component:RecibidosComponent, title: "Recibidos Frio"}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

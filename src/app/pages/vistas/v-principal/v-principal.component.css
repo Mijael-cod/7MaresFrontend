@@ -39,6 +39,7 @@ body {
   }
   
   
+  
   /* MARKETING CONTENT
   -------------------------------------------------- */
   
@@ -73,9 +74,15 @@ body {
     letter-spacing: -.05rem;
   }
   
-  .btn:hover{
-    background-color: transparent;
-  }
+ 
+  
+  .card:hover .card-img-overlay {
+    background-color: transparent !important;
+    opacity: 1 !important;
+  }  
+ 
+  
+  
   /* RESPONSIVE CSS
   -------------------------------------------------- */
   
