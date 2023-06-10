@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { MeseroModule } from './mesero/mesero.module';
+import { CajeroModule } from './cajero/cajero.module';
+import { CocineroModule } from './cocinero/cocinero.module';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { MeseroModule } from './mesero/mesero.module';
     CommonModule,
     PagesRoutingModule,
     SharedModule,
-    MeseroModule
+    MeseroModule,
+    CajeroModule,
+    CocineroModule
   ]
 })
 export class PagesModule { }
