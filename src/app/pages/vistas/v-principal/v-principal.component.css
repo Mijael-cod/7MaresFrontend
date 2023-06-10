@@ -73,7 +73,9 @@ body {
     letter-spacing: -.05rem;
   }
   
-  
+  .btn:hover{
+    background-color: transparent;
+  }
   /* RESPONSIVE CSS
   -------------------------------------------------- */
   
