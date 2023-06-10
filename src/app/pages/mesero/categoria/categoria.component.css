@@ -1,0 +1,147 @@
+.color-fondo-platos{
+    background-color: #E0E0E0 !important;
+}
+
+.color-white{
+    color: white;
+}
+
+.color-nav{
+    background-color: #7CC5E0;
+}
+
+.caja-1{
+    background-color: #3FB785 !important;
+    width: 200px !important;
+    height: 140px;
+    border-radius: 15px;
+    
+}
+
+.caja-2{
+    background-color: #3EE061 !important;
+    width: 200px !important;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.caja-3{
+    background-color: #954CAF !important;
+    width: 200px !important;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.caja-4{
+    background-color: #DD1C1C !important;
+    width: 200px !important;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.caja-5{
+    background-color: #B73F3F !important;
+    width: 200px !important;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.caja-6{
+    background-color: #D49F36;
+    width: 200px !important;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.caja-n{
+    background-color: transparent !important;
+    width: 200px !important;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.caja-new{
+    background-color: white;
+    width: 200px !important;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.txt-1{
+    font-size: 16px;
+    color: aliceblue;
+}
+
+.bt-r{
+    border-radius: 50px;
+    background-color: #3FB785 !important;
+    width: 250px !important;
+
+}
+
+.txt-c{
+    margin-left: 150px;
+}
+
+.boton-new{
+    display: flex !important;
+    justify-content: center;
+}
+
+.bt-n{
+    width: 110px;
+    border-radius: 20px;
+    
+}
+
+.btn-1{
+    background-color: #3FB785 !important;
+}
+
+.btn-2{
+    background-color: #DD1C1C !important;
+}
+
+.iconos{
+    display: flex ;
+    justify-content: start;
+    margin: 15px;
+    margin-left: 25px !important;
+    font-size: 20px;
+    
+}
+
+.iconos2{
+    display: flex ;
+    justify-content: end;
+    margin-top: -34px;
+    margin-right: 22px !important;
+    font-size: 20px;
+    
+}
+
+.iconos3{
+    display: flex ;
+    justify-content: end;
+    margin: 15px;
+    margin-left: 470px !important;
+    font-size: 20px;
+    
+}
+
+.iconos4{
+    display: flex ;
+    justify-content: end;
+    margin-top: -34px;
+    margin-right: 60px !important;
+    font-size: 20px;
+    
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.txt-e{
+    margin-left: 50px;
+}
