@@ -12,14 +12,14 @@ import { PagesRoutingModule } from './pages/pages-routing.module';
 
 const routes: Routes = [
   { path: '', redirectTo: 'principal-panel/vista-publica', pathMatch: 'full' },
-  { path: 'admin', component: AdminComponent },
+  /* { path: 'admin', component: AdminComponent },
   { path: 'header', component: HeaderComponent },
   { path: 'sidebar', component: SidebarComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registrar', component: RegistrarComponent },
   { path: 'pin-code', component: PincodeComponent },
   { path: 'recuperarcontra', component: RecuperarcontraComponent },
-  { path: 'actualizarcontra', component: ActualizacontraComponent },
+  { path: 'actualizarcontra', component: ActualizacontraComponent }, */
 
 ]
 

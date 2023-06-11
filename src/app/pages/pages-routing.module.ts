@@ -3,17 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { PanelAdministradorComponent } from '../shared/panel-administrador/panel-administrador.component';
 import { CajeroModule } from './cajero/cajero.module';
 import { MeseroModule } from './mesero/mesero.module';
+import { MeseroPanelComponent } from '../shared/mesero-panel/mesero-panel.component';
 
 const routes: Routes = [
   {
     path: 'principal-panel',
     title: 'principal Panel | 7 mares',
     children: [
-     /*  { path: 'login', canActivate: [LoginGuard], component: LoginComponent, title: 'Login' }, */
-     /*  { path: 'recuperar-contrasenia', component: RecuperarContraseniaComponent, title: 'Recuperando Contraseña' }, */
+      /*  { path: 'login', canActivate: [LoginGuard], component: LoginComponent, title: 'Login' }, */
+      /*  { path: 'recuperar-contrasenia', component: RecuperarContraseniaComponent, title: 'Recuperando Contraseña' }, */
       { path: '', loadChildren: () => import('./vistas/vistas.module').then(m => m.VistasModule) },
     ]
   },
+
   {
     path: 'admin-panel',
     // canActivate: [AdminPanelGuard],
@@ -23,6 +25,15 @@ const routes: Routes = [
       // { path: 'dashboard', component: VistaUsuariosLogeadosComponent, title: 'Dashboard' },
       // { path: '', loadChildren: () => import('./admin').then(m => m.AdminModule) },
       { path: '', loadChildren: () => import('./cajero/cajero.module').then(m => m.CajeroModule) },
+      { path: '', loadChildren: () => import('./cocinero/cocinero.module').then(m => m.CocineroModule) }
+    ]
+  },
+
+  {
+    path: 'mesero-panel',
+    component: MeseroPanelComponent,
+    title: 'Admin Panel | 7 Mares',
+    children: [
       { path: '', loadChildren: () => import('./mesero/mesero.module').then(m => m.MeseroModule) }
     ]
   }

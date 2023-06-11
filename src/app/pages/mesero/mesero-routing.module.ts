@@ -4,8 +4,8 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { PlatilloComponent } from './platillo/platillo.component';
 
 const routes: Routes = [
-  {path: 'categoria', component:CategoriaComponent, title: "Categoria"},
-  {path: 'platillo', component:PlatilloComponent, title: "Platillo"}
+  {path: 'categoria', component:CategoriaComponent, title: "Categoria - Mesero"},
+  {path: 'platillo', component:PlatilloComponent, title: "Platillo - Mesero"}
 ];
 
 @NgModule({
