@@ -13,3 +13,17 @@ export class VPrincipalComponent implements OnInit {
   }
 
 }
+
+document.addEventListener('click', (event: Event) => {
+  const target = event.target as HTMLElement;
+  const navbarCollapse = document.getElementById('navbarCollapse');
+  const navbarToggle = document.querySelector('[data-bs-toggle="collapse"]');
+  const isInsideNavbarCollapse = navbarCollapse?.contains(target);
+  
+  if (!isInsideNavbarCollapse && !target.isSameNode(navbarToggle)) {
+    const isExpanded = navbarCollapse?.classList.contains('show');
+    if (isExpanded) {
+      navbarCollapse?.classList.remove('show');
+    }
+  }
+});
