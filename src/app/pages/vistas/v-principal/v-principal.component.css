@@ -79,8 +79,21 @@ body {
   .card:hover .card-img-overlay {
     background-color: transparent !important;
     opacity: 1 !important;
+
   }  
- 
+
+  .card:hover .card-img-overlay strong{
+    color: white; 
+    text-shadow: 0 0 20px dodgerblue;
+  }
+
+  a:link { text-decoration: none;
+  }
+  a:visited {
+  text-decoration: none;
+  }
+
+
   
   
   /* RESPONSIVE CSS
@@ -104,3 +117,31 @@ body {
       margin-top: 7rem;
     }
   }
+
+  @media (max-width: 768px) {
+    .carousel-item {
+      height: 25rem;
+    }
+
+    .carousel-item img {
+      height: 25rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .carousel-item {
+      height: 15rem;
+    }
+
+    .carousel-item img {
+      height: 15rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .ere {
+      height: 15rem;
+    }
+  }
+
+ 
