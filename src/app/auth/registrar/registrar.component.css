@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	/* background: url(../img/logo7mares.jpg) no-repeat center top; */
-	background-color: antiquewhite;
+	background-color: rgb(255, 255, 255);
 	background-size: cover;
 	font-family: sans-serif;
 	height: 100vh;
@@ -15,8 +15,8 @@
 	opacity: 0.7;
 	border-radius: 35px;
 	color: #fff;
-	top: 50%;
-	left: 50%;
+	top: 54%;
+	left: 76%;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	box-sizing: border-box;

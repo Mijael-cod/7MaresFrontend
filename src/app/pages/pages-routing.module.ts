@@ -4,6 +4,9 @@ import { PanelAdministradorComponent } from '../shared/panel-administrador/panel
 import { CajeroModule } from './cajero/cajero.module';
 import { MeseroModule } from './mesero/mesero.module';
 import { MeseroPanelComponent } from '../shared/mesero-panel/mesero-panel.component';
+import { LoginComponent } from '../auth/login/login.component';
+import { RegistrarComponent } from '../auth/registrar/registrar.component';
+
 
 const routes: Routes = [
   {
@@ -30,13 +33,17 @@ const routes: Routes = [
   },
 
   {
-    path: 'mesero-panel',
+    path: 'navbar-panel',
     component: MeseroPanelComponent,
     title: 'Admin Panel | 7 Mares',
     children: [
-      { path: '', loadChildren: () => import('./mesero/mesero.module').then(m => m.MeseroModule) }
+      { path: '', loadChildren: () => import('./mesero/mesero.module').then(m => m.MeseroModule) },
+      { path: 'login', component: LoginComponent, title: 'Login'},
+      { path: 'registrar', component: RegistrarComponent, title: 'Registrar'}
+
     ]
   }
+  
 ];
 
 @NgModule({
