@@ -6,6 +6,7 @@ import { SharedModule } from './shared/shared.module';
 import { PagesModule } from './pages/pages.module';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
     SharedModule,
     PagesModule,
     RouterModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
