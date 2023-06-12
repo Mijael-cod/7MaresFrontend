@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+
 import { CategoriaComponent } from './categoria.component';
+
 
 describe('CategoriaComponent', () => {
   let component: CategoriaComponent;
@@ -20,4 +22,8 @@ describe('CategoriaComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });
+
+
+
