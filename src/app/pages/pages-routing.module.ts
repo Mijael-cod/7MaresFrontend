@@ -33,13 +33,11 @@ const routes: Routes = [
   },
 
   {
-    path: 'navbar-panel',
+    path: 'mesero-panel',
     component: MeseroPanelComponent,
     title: 'Admin Panel | 7 Mares',
     children: [
-      { path: '', loadChildren: () => import('./mesero/mesero.module').then(m => m.MeseroModule) },
-      { path: 'login', component: LoginComponent, title: 'Login'},
-      { path: 'registrar', component: RegistrarComponent, title: 'Registrar'}
+      { path: '', loadChildren: () => import('./mesero/mesero.module').then(m => m.MeseroModule) }
 
     ]
   }
