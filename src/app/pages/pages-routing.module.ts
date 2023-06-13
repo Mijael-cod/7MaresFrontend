@@ -28,7 +28,8 @@ const routes: Routes = [
       // { path: 'dashboard', component: VistaUsuariosLogeadosComponent, title: 'Dashboard' },
       // { path: '', loadChildren: () => import('./admin').then(m => m.AdminModule) },
       { path: '', loadChildren: () => import('./cajero/cajero.module').then(m => m.CajeroModule) },
-      { path: '', loadChildren: () => import('./cocinero/cocinero.module').then(m => m.CocineroModule) }
+      { path: '', loadChildren: () => import('./cocinero/cocinero.module').then(m => m.CocineroModule) },
+      { path: '', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)}
     ]
   },
 

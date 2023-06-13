@@ -7,6 +7,7 @@ import { PagesModule } from './pages/pages.module';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
+import { AdminModule } from './pages/admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AuthModule } from './auth/auth.module';
     SharedModule,
     PagesModule,
     RouterModule,
-    AuthModule
+    AuthModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
