@@ -38,7 +38,6 @@ const routes: Routes = [
     title: 'Admin Panel | 7 Mares',
     children: [
       { path: '', loadChildren: () => import('./mesero/mesero.module').then(m => m.MeseroModule) }
-
     ]
   }
   
