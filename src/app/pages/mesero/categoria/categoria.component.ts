@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CategoriaDto } from 'src/app/models/CategoriaDto.model';
 import { Categorias } from 'src/app/models/Categorias.model';
 import { MeseroService } from 'src/app/services/mesero.service';
 
@@ -12,34 +13,33 @@ import { MeseroService } from 'src/app/services/mesero.service';
 
 export class CategoriaComponent implements OnInit {
 
-  categorias: Categorias[]=[];
+  categorias: Categorias[] = [];
 
-  constructor(private router: Router, private meseroService:MeseroService) { }
+  categoriaDto: CategoriaDto = new CategoriaDto();
+
+  constructor(private router: Router, private meseroService: MeseroService) { }
 
   ngOnInit(): void {
-
-   this.listarCategorias(); 
-   console.log("hola")
+    this.listarCategorias();
 
   }
 
-  listarCategorias(){
-    console.log("ando dentro gaaa")
-
+  listarCategorias() {
     this.meseroService.listarCategorias().subscribe({
-      next: (categorias:Categorias[])=>{
-        this.categorias=categorias
-        console.log(this.categorias)
+      next: (response: any) => {
+        this.categorias = response.data;
       },
       error: (error) => {
         console.log(error); // Maneja el error de ser necesario
       }
     })
-    
-    
   }
 
-  cambiarPlatillos(){
+  editarCategoria(){
+    this.meseroService.editarCategoria
+  }
+
+  cambiarPlatillos() {
     this.router.navigate(['/mesero-panel/platillo'])
   }
 
