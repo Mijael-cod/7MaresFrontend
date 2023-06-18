@@ -16,17 +16,21 @@ export class PlatilloComponent implements OnInit {
   constructor(private router: Router, private meseroService: MeseroService) { }
 
   ngOnInit(): void {
-     this.listarPlatillosPorIdDeCategoria();
+    this.listarPlatillosPorIdDeCategoria();
   }
 
   listarPlatillosPorIdDeCategoria() {
     const idCategoria = localStorage.getItem('idCategoria');
     this.meseroService
       .listarPlatillosPorIdCategoria(+idCategoria)
-      .subscribe((response: ServiceResponse) => {
-        this.platillosDto = response.data;
-        console.log(this.platillosDto);
-      });
+      .subscribe(
+        {
+          next: (serviceResponse: ServiceResponse) => {
+            this.platillosDto = serviceResponse.data
+            console.log(this.platillosDto);
+          }
+        }
+      );
   }
 
   volverCategorias() {

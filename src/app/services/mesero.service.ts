@@ -16,15 +16,15 @@ export class MeseroService {
   constructor(private http: HttpClient) { }
 
   listarCategorias() {
-    return this.http.get<Categorias[]>(`${this.endpoint}/categorias`);
+    return this.http.get<Categorias[]>(`${this.endpoint}/categorias/listarCategorias`);
   }
 
   editarCategoria(categoriaDto: CategoriaDto, id: number) {
     return this.http.put<CategoriaDto>(`${this.endpoint}/${id}`, categoriaDto);
   }
 
-  listarPlatillosPorIdCategoria(idCategoria: number): Observable<ServiceResponse> {
-    return this.http.get<ServiceResponse>(`${this.endpoint}/platillos/listarPlatillosPorIdDeCategoria/${idCategoria}`);
+  listarPlatillosPorIdCategoria(idCategoria: number) {
+    return this.http.get(`${this.endpoint}/platillos/listarPlatillosPorIdDeCategoria/${idCategoria}`);
   }
 
 }

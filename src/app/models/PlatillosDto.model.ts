@@ -1,11 +1,12 @@
-export class PlatillosDto{
+export class PlatillosDto {
 
     idPlatillos: number;
-    nombrePlatillos: string;
-    costoPlatillos: number;
-    estadoPlatillos: number;
+    nombrePlatillo: string;
+    costoPlatillo: number;
+    estadoPlatillo: number;
 
     categorias: number;
     tipoPlatillo: number;
+
 
 }
