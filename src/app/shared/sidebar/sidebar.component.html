@@ -9,36 +9,31 @@
 				</a>
 				<hr class="text-dark d-none d-sm-block">
 				<ul class="nav nav-pills flex-column mt-2 mt-sm-0 " id="menu1">
-					<li class="nav-item my-sm-1 my-2 ">
 
-						<a href="#sidemenuCocinero1" data-bs-toggle="collapse"
-							class="nav-link text-dark text-center text-sm-start" aria-current="page">
-							<i class="fa-brands fa-hotjar"></i>
-							<span class="ms-2 d-none d-sm-inline">Comidas Calientes </span>
-							<i class="fa fa-caret-down"></i>
-						</a>
-						
+					<li class="nav-item my-sm-1 my-2 " (click)="irPagosTotal()">
+
 						<a href="#sidecajeropagos1" data-bs-toggle="collapse" class="nav-link text-dark text-center text-sm-start" aria-current="page">
 							<i class="fa-solid fa-cash-register"></i>
 							<span class="ms-2 d-none d-sm-inline">Pagos</span>
 						</a>
 						
 					</li>
+
 					<li class="nav-item my-sm-1 my-2 disabled">
-						<a href="#sidemenu1" data-bs-toggle="collapse"
+						<a href="#sidemenu1" data-bs-toggle="collapse" 
 							class="nav-link text-dark text-center text-sm-start" aria-current="page">
 							<i class="fa-solid fa-chart-line"></i>
 							<span class="ms-2 d-none d-sm-inline">Diario </span>
 							<i class="fa fa-caret-down"></i>
 						</a>
 						<ul class="nav collapse ms-1 flex-column" id="sidemenu1" data-bs-parent="#menu1">
-							<li class="nav-item">
-								<a href="" class="nav-link text-dark" href="" aria-current="page">
+							<li class="nav-item"  (click)="irDiagraPastelDiario()">
+								<a type="button"class="nav-link text-dark" aria-current="page">
 									<i class="fa-solid fa-chart-pie"></i> Diagrama Pastel
 								</a>
 							</li>
-							<li class="nav-item">
-								<a href="" class="nav-link text-dark" href="">
+							<li class="nav-item" (click)="irDiagraBarraDiario()">
+								<a class="nav-link text-dark" type="button">
 									<i class="fa-solid fa-chart-simple"></i> Diagrama Barras
 								</a>
 							</li>
@@ -52,13 +47,13 @@
 							<i class="fa fa-caret-down"></i>
 						</a>
 						<ul class="nav collapse ms-1 flex-column" id="sidemenu2" data-bs-parent="#menu2">
-							<li class="nav-item">
-								<a href="" class="nav-link text-dark" href="" aria-current="page">
+							<li class="nav-item"  (click)="irDiagraPastelSemanal()">
+								<a type="button" class="nav-link text-dark" aria-current="page">
 									<i class="fa-solid fa-chart-pie"></i> Diagrama Pastel
 								</a>
 							</li>
-							<li class="nav-item">
-								<a href="" class="nav-link text-dark" href="">
+							<li class="nav-item"  (click)="irDiagraBarraSemanal()">
+								<a type="button" class="nav-link text-dark" >
 									<i class="fa-solid fa-chart-simple"></i> Diagrama Barras
 								</a>
 							</li>
@@ -72,13 +67,13 @@
 							<i class="fa fa-caret-down"></i>
 						</a>
 						<ul class="nav collapse ms-1 flex-column" id="sidemenu3" data-bs-parent="#menu3">
-							<li class="nav-item">
-								<a href="" class="nav-link text-dark" href="" aria-current="page">
+							<li class="nav-item" (click)="irDiagraPastelMensual()">
+								<a class="nav-link text-dark" type="button" aria-current="page">
 									<i class="fa-solid fa-chart-pie"></i> Diagrama Pastel
 								</a>
 							</li>
-							<li class="nav-item">
-								<a href="" class="nav-link text-dark" href="">
+							<li class="nav-item" (click)="irDiagraBarraMensual()">
+								<a type="button" class="nav-link text-dark">
 									<i class="fa-solid fa-chart-simple"></i> Diagrama Barras
 								</a>
 							</li>
@@ -96,13 +91,13 @@
 						</a>
 						<ul class="nav collapse ms-1 flex-column" id="sidemenuCocinero1"
 							data-bs-parent="#menuCocinero1">
-							<li class="nav-item">
-								<a routerLink="recibidos-caliente" class="nav-link text-dark"  aria-current="page">
+							<li class="nav-item" (click)="irRecibidoCaliente()">
+								<a  type="button" class="nav-link text-dark"  aria-current="page">
 									<i class="fa-solid fa-file-import"></i> Recibidos
 								</a>
 							</li>
-							<li class="nav-item">
-								<a routerLink="listos-caliente" class="nav-link text-dark">
+							<li class="nav-item" (click)="irListoCaliente()">
+								<a  type="button"class="nav-link text-dark">
 									<i class="fa-solid fa-file-circle-check"></i> Listos
 								</a>
 							</li>
@@ -117,17 +112,26 @@
 						</a>
 						<ul class="nav collapse ms-1 flex-column" id="sidemenuCocinero2"
 							data-bs-parent="#menuCocinero2">
-							<li class="nav-item">
-								<a routerLink="recibidos-frio" class="nav-link text-dark" aria-current="page">
+							<li class="nav-item" (click)="irRecibidoFrio()">
+								<a  type="button" class="nav-link text-dark" aria-current="page">
 									<i class="fa-solid fa-file-import"></i> Recibidos
 								</a>
 							</li>
-							<li class="nav-item">
-								<a routerLink="listos-frio" class="nav-link text-dark" >
+							<li class="nav-item" (click)="irListoFrio()">
+								<a  type="button" class="nav-link text-dark" >
 									<i class="fa-solid fa-file-circle-check"></i> Listos
 								</a>
 							</li>
 						</ul>
+					</li>
+
+					<li class="nav-item my-sm-1 my-2 " (click)="irCategoriaPlatillo()">
+
+						<a href="#sidecajeropagos1" data-bs-toggle="collapse" class="nav-link text-dark text-center text-sm-start" aria-current="page">
+							<i class="fa-solid fa-utensils"></i>
+							<span class="ms-2 d-none d-sm-inline">Platos</span>
+						</a>
+						
 					</li>
 				</ul>
 			</div>

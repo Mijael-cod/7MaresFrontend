@@ -42,5 +42,6 @@ export class CategoriaComponent implements OnInit {
   cambiarPlatillos() {
     this.router.navigate(['/mesero-panel/platillo'])
   }
+  
 
 }
