@@ -39,7 +39,11 @@ export class CategoriaComponent implements OnInit {
     this.meseroService.editarCategoria
   }
 
-  cambiarPlatillos() {
+
+
+  cambiarPlatillos(idCategoria: number) {
+    
+    localStorage.setItem('idCategoria', idCategoria.toString())
     this.router.navigate(['/mesero-panel/platillo'])
   }
   
