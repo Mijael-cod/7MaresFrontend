@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MeseroRoutingModule } from './mesero-routing.module';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { PlatilloComponent } from './platillo/platillo.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { PlatilloComponent } from './platillo/platillo.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MeseroRoutingModule
   ]
 })

@@ -17,7 +17,6 @@ export class CategoriaComponent implements OnInit {
 
   categorias: Categorias[] = [];
   platillosDto: PlatillosDto[] = [];
-
   categoriaDto: CategoriaDto = new CategoriaDto();
 
   constructor(private router: Router, private meseroService: MeseroService) { }
@@ -37,11 +36,50 @@ export class CategoriaComponent implements OnInit {
     })
   }
 
-  editarCategoria() {
-    this.meseroService.editarCategoria
+  agregarCategoria(event: Event) {
+    this.meseroService.agregarCategoria(this.categoriaDto)
+      .subscribe({
+        next: (resp: any) => {
+          console.log(resp);
+
+        }, error: (err) => {
+          console.log(err);
+        }
+      })
   }
 
+  editarCategoria(event: Event) {
+    const id = localStorage.getItem("idCat")
+    console.log("entrando");
+    this.meseroService
+      .editarCategoria(this.categoriaDto, +id)
+      .subscribe(
+        {
+          next: (resp: any) => {
+            console.log(resp);
+            localStorage.removeItem('idCat');
+            this.router.navigate(['/mesero-panel/categoria'])
+          }, error: (err) => {
+            console.log(err);
+          }
+        })
+  }
 
+  eliminarCategoria() {
+    const idCategoria = localStorage.getItem("idCat")
+
+    this.meseroService
+      .eliminarCategoria(+idCategoria)
+      .subscribe({
+        next: (resp: any) => {
+          console.log(resp);
+          localStorage.removeItem('idCat');
+          this.router.navigate(['/mesero-panel/categoria'])
+        }, error: (err) => {
+          console.log(err);
+        }
+      })
+  }
 
   cambiarPlatillos(idCategoria: number) {
 
@@ -49,7 +87,8 @@ export class CategoriaComponent implements OnInit {
     this.router.navigate(['/mesero-panel/platillo'])
   }
 
-  
-
+  subirIdCategoria(idCat: number) {
+    localStorage.setItem('idCat', idCat.toString())
+  }
 
 }

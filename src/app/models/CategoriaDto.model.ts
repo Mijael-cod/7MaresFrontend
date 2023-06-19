@@ -4,6 +4,8 @@ export class CategoriaDto{
     estadoCategoria:number;
 
     constructor(){
-        this.nombreCategoria= "";
+        this.estadoCategoria=1;
+        this.nombreCategoria=this.nombreCategoria;
+        
     }
 }

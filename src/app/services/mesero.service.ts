@@ -19,9 +19,20 @@ export class MeseroService {
     return this.http.get<Categorias[]>(`${this.endpoint}/categorias/listarCategorias`);
   }
 
-  editarCategoria(categoriaDto: CategoriaDto, id: number) {
-    return this.http.put<CategoriaDto>(`${this.endpoint}/${id}`, categoriaDto);
+  agregarCategoria(categoriaDto: CategoriaDto) {
+    return this.http.post(`${this.endpoint}/categorias/agregarCategorias`, categoriaDto)
   }
+
+  editarCategoria(categoriaDto: CategoriaDto, id: number) {
+    return this.http.put<CategoriaDto>(`${this.endpoint}/categorias/editarCategoria/${id}`, categoriaDto);
+  }
+
+  eliminarCategoria(idCategoria: number) {
+    return this.http.delete(`${this.endpoint}/categorias/eliminarCategoria/${idCategoria}`)
+  }
+
+
+
 
   listarPlatillosPorIdCategoria(idCategoria: number) {
     return this.http.get(`${this.endpoint}/platillos/listarPlatillosPorIdDeCategoria/${idCategoria}`);

@@ -3,9 +3,8 @@
 		<div class="row">
 			<div class="col-md-9 contenedor9" style="background-color: #E0E0E0; height: 88.7vh;">
 				<div class="row">
-					<div class="mt-2 col-lg-2 col-md-4 col-sm-6  " style="height: 24%;"
+					<!-- <div class="mt-2 col-lg-2 col-md-4 col-sm-6  " style="height: 24%;"
 						*ngFor="let categoria of categorias">
-						<!-- *ngFor="let categoria of categorias" -->
 						<div class=" card m-1 caja-1" type="button" (click)="cambiarPlatillos(categoria.idCategoria)">
 							<div class="col-md-12 d-flex justify-content-center align-items-center">
 								<div class="col-md-3 d-flex justify-content-center align-items-center mt-2">
@@ -14,24 +13,66 @@
 											data-bs-target="#exampleModal2"></i>
 									</div>
 								</div>
+
 								<div class="col-md-6 "></div>
+
 								<div class="col-md-3 d-flex justify-content-center align-items-center mt-2"
-									style="margin-left: 2%;">
-									<div class="iconos3">
+									style="margin-left: 2%;" (click)="subirIdCategoria(categoria.idCategoria)">
+									<div class="iconos3 btn">
 										<i class="fa-solid fa-trash cursor" data-bs-toggle="modal"
 											data-bs-target="#exampleModal3"></i>
 									</div>
 								</div>
+
 							</div>
 							<div style="height: 100%;"
 								class="card-body d-flex justify-content-center text-center align-items-center">
 								<h5 class="card-title txt-1">
-									<!-- iosep carepoto -->
+									{{ categoria.nombreCategoria }}
+								</h5>
+							</div>
+						</div>
+					</div> -->
+
+
+
+
+
+					<div class="mt-2 col-lg-2 col-md-4 col-sm-6  " style="height: 24%;"
+						*ngFor="let categoria of categorias">
+						<!-- *ngFor="let categoria of categorias" -->
+						<div class=" card m-1 caja-1" type="button">
+							<div class="col-md-12 d-flex justify-content-center align-items-center">
+
+								<div class="col-md-3 d-flex justify-content-center align-items-center mt-2">
+									<div class="iconos3 btn" (click)="subirIdCategoria(categoria.idCategoria)">
+										<i class="fa-solid fa-pen cursor" data-bs-toggle="modal"
+											data-bs-target="#exampleModal2"></i>
+									</div>
+								</div>
+
+								<div class="col-md-6 "></div>
+
+								<div class="col-md-3 d-flex justify-content-center align-items-center mt-2"
+									style="margin-left: 2%;">
+									<div class="iconos3 btn" (click)="subirIdCategoria(categoria.idCategoria)">
+										<i class="fa-solid fa-trash cursor" data-bs-toggle="modal"
+											data-bs-target="#exampleModal3"></i>
+									</div>
+								</div>
+
+							</div>
+							<div style="height: 100%;" (click)="cambiarPlatillos(categoria.idCategoria)"
+								class="card-body d-flex justify-content-center text-center align-items-center">
+								<h5 class="card-title txt-1">
 									{{ categoria.nombreCategoria }}
 								</h5>
 							</div>
 						</div>
 					</div>
+
+
+
 
 					<div class="mt-2 col-lg-2 col-md-4 col-sm-6  " style="height: 24%;"
 						*ngFor="let platillo of platillosDto">
@@ -55,7 +96,7 @@
 							<div style="height: 100%;"
 								class="card-body d-flex justify-content-center text-center align-items-center">
 								<h5 class="card-title txt-1">
-									{{ platillo?.nombrePlatillo }}
+									{{ platillo.nombrePlatillo }}
 								</h5>
 							</div>
 						</div>
@@ -77,6 +118,8 @@
 									src="assets/img/agregar_categoria.png" width="120" height="110" alt=""></a>
 						</div>
 					</div>
+
+
 				</div>
 
 
@@ -84,22 +127,26 @@
 				<div class="modal fade mt-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
 					aria-hidden="true">
 					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h1 class="modal-title fs-5 txt-c" id="exampleModalLabel">Agregar Categoria</h1>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
+						<form (ngSubmit)="agregarCategoria($event)">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5 txt-c" id="exampleModalLabel">Agregar Categoria</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+									<input type="text" [(ngModel)]="categoriaDto.nombreCategoria" name="nombreCategoria"
+										class="form-control" id="exampleFormControlInput1" placeholder="">
+								</div>
+								<div class="modal-footer boton-new">
+									<button type="button" class="btn btn-danger bt-n btn-2"
+										data-bs-dismiss="modal">Salir</button>
+
+									<button type="submit" class="btn btn-success bt-n btn-1">Guardar</button>
+								</div>
 							</div>
-							<div class="modal-body">
-								<label for="exampleFormControlInput1" class="form-label">Nombre:</label>
-								<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-							</div>
-							<div class="modal-footer boton-new">
-								<button type="button" class="btn btn-danger bt-n btn-2"
-									data-bs-dismiss="modal">Salir</button>
-								<button type="button" class="btn btn-success bt-n btn-1">Guardar</button>
-							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 
@@ -107,22 +154,28 @@
 				<div class="modal fade mt-5" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
 					aria-hidden="true">
 					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h1 class="modal-title fs-5 txt-c" id="exampleModalLabel">Editar Categoria</h1>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
+						<form (ngSubmit)="editarCategoria($event)">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5 txt-c" id="exampleModalLabel">Editar Categoria</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+
+								<div class="modal-body">
+									<label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+									<input type="email" [(ngModel)]="categoriaDto.nombreCategoria"
+										name="nombreCategoria" class="form-control" id="exampleFormControlInput1"
+										placeholder="">
+								</div>
+								<div class="modal-footer boton-new">
+									<button type="button" class="btn btn-danger bt-n btn-2"
+										data-bs-dismiss="modal">Salir</button>
+									<button type="submit" class="btn btn-success bt-n btn-1">Actualizar</button>
+								</div>
+
 							</div>
-							<div class="modal-body">
-								<label for="exampleFormControlInput1" class="form-label">Nombre:</label>
-								<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-							</div>
-							<div class="modal-footer boton-new">
-								<button type="button" class="btn btn-danger bt-n btn-2"
-									data-bs-dismiss="modal">Salir</button>
-								<button type="button" class="btn btn-success bt-n btn-1">Guardar</button>
-							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 
@@ -138,14 +191,18 @@
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-footer boton-new">
-								<button type="button" class="btn btn-success bt-n btn-1"
-									data-bs-dismiss="modal">Confirmar</button>
+								<button type="button" class="btn btn-success bt-n btn-1" data-bs-dismiss="modal"
+									(click)="eliminarCategoria()">Confirmar</button>
 								<button type="button" class="btn btn-danger bt-n btn-2">Cancelar</button>
 							</div>
 						</div>
 					</div>
 				</div>
+
+
 			</div>
+
+
 			<div class=" col-md-3 bg-light">
 				<div class="mt-3 row d-flex justify-content-center align-items-center">
 					<div class="col-1">
