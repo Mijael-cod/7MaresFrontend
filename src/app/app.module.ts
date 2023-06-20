@@ -9,6 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { AdminModule } from './pages/admin/admin.module';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +25,8 @@ import { AdminModule } from './pages/admin/admin.module';
     RouterModule,
     AuthModule,
     AdminModule
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

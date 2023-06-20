@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div style="background-color: #E0E0E0;">
     <br>
     <br>
@@ -7,7 +8,10 @@
         <div class="col-md-11" style="background-color: #3FB785; margin-top: -22px;">
           <h5 style="color:white; height: 45px;" class="d-flex align-items-center">Reporte Diario</h5>
         </div>
-        <img class="img-fluid h-25 w-25"  src="https://www.merkle.com/es/sites/es/files/inline-images/tarta_1_0.png" alt="">
+
+        <canvas id="myChart"></canvas>
+        <!-- <img class="img-fluid h-25 w-25"  src="https://www.merkle.com/es/sites/es/files/inline-images/tarta_1_0.png" alt=""> -->
+
         <div class="col-md-11 table-responsive d-flex">
             
           <table class="table table-border table-hover table-responsive mt-3">
@@ -97,3 +101,26 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
