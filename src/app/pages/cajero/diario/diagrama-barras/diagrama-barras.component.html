@@ -1,84 +1,97 @@
-<div class="p-5" style="background-color: white !important;">
-    <table class="table text-center">
-        <thead>
-          <tr>
-            <th scope="col">N°</th>
-            <th scope="col">Nombre de cliente</th>
-            <th scope="col">Pedido</th>
-            <th scope="col">Total</th>
-            <th scope="col">Estado del Pedido</th>
-          </tr>
-        </thead>
-        <tbody class="text-center">
-          <tr>
-            <th scope="row">1</th>
-            <td>Manuel Merino, mesa 1</td>
-            <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
-            <td>S/.40.00</td>
-            <td><button type="button" class="btn btn-success disabled">Cancelado</button></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Manuel Merino, mesa 1</td>
-            <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
-            <td>S/.40.00</td>
-            <td><button type="button" class="btn btn-danger disabled">No Cancelado</button></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Manuel Merino, mesa 1</td>
-            <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
-            <td>S/.40.00</td>
-            <td><button type="button" class="btn btn-success disabled">Cancelado</button></td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Manuel Merino, mesa 1</td>
-            <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
-            <td>S/.40.00</td>
-            <td><button type="button" class="btn btn-success disabled">Cancelado</button></td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Manuel Merino, mesa 1</td>
-            <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
-            <td>S/.40.00</td>
-            <td><button type="button" class="btn btn-success disabled">Cancelado</button></td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>Manuel Merino, mesa 1</td>
-            <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
-            <td>S/.40.00</td>
-            <td><button type="button" class="btn btn-danger disabled">No Cancelado</button></td>
-          </tr>
-        </tbody>
-      </table>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Manuel Merino, mesa 1</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+<div style="background-color: #E0E0E0;">
+  <br>
+  <br>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="row container-fluid d-flex justify-content-center"
+      style=" background-color: white; border-radius: 15px;">
+      <div class="col-md-11" style="background-color: #3FB785; margin-top: -22px;">
+        <h5 style="color:white; height: 45px;" class="d-flex align-items-center">Listar pagos</h5>
+      </div>
+      <div class="col-md-11 table-responsive d-flex">
+        <table class="table table-border table-hover table-responsive mt-3">
+          <thead>
             <tr>
-                <th scope="row">1.</th>
-                <td>Saltado de Pollo</td>
-                <td>S/.20.00</td>
-              </tr>
-        </div>
-        <div class="modal-footer">
-            <div class="d-flex">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Total:</h1>
-                <h1 class="modal-title fs-5" id="exampleModalLabel">S/40.00</h1>
-            </div>
-       
-
-        </div>
+              <th scope="col" class="text-nowrap">Nº</th>
+              <th scope="col" class="text-nowrap">Nombre del cliente</th>
+              <th scope="col" class="text-nowrap ">Pedido</th>
+              <th scope="col" class="text-nowrap">Total</th>
+              <th scope="col" class="text-nowrap">Estado del pedido</th>
+            </tr>
+          </thead>
+          <tbody class="">
+            <tr class="">
+              <th scope="row">1</th>
+              <td class="text-nowrap">Manuel Merino, mesa 1</td>
+              <td><button type="button" class="btn btn-warning align-items-center d-flex justify-content-center" style="height: 20px; width:100px;;font-size: 15px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
+              <td class="text-nowrap">S/. 40.00</td>
+              <td><button type="button" class="btn btn-success disabled d-flex justify-content-center align-items-center" style="height: 20px; width:120px;;font-size: 15px;">Cancelado</button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td class="text-nowrap">Javier Sanchez, mesa 7</td>
+              <td><button type="button" class="btn btn-warning align-items-center d-flex justify-content-center" style="height: 20px; width:100px;;font-size: 15px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
+              <td class="text-nowrap">S/. 20.00</td>
+              <td><button type="button" class="btn btn-success disabled d-flex justify-content-center align-items-center" style="height: 20px; width:120px;;font-size: 15px;">Cancelado</button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td class="text-nowrap">Daniela Huerta, mesa 10</td>
+              <td><button type="button" class="btn btn-warning align-items-center d-flex justify-content-center" style="height: 20px; width:100px;;font-size: 15px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
+              <td class="text-nowrap">S/. 15.50</td>
+              <td><button type="button" class="btn btn-danger disabled d-flex justify-content-center align-items-center" style="height: 20px; width:120px;;font-size: 15px;">No Cancelado</button></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td class="text-nowrap">Gerson Bravo, mesa 4</td>
+              <td><button type="button" class="btn btn-warning align-items-center d-flex justify-content-center" style="height: 20px; width:100px;;font-size: 15px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
+              <td class="text-nowrap">S/. 20.00</td>
+              <td><button type="button" class="btn btn-success disabled d-flex justify-content-center align-items-center" style="height: 20px; width:120px;;font-size: 15px;">Cancelado</button></td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td class="text-nowrap">Makki Aliaga, mesa 8</td>
+              <td><button type="button" class="btn btn-warning align-items-center d-flex justify-content-center" style="height: 20px; width:100px;;font-size: 15px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
+              <td class="text-nowrap">S/. 60.30</td>
+              <td><button type="button" class="btn btn-danger disabled d-flex justify-content-center align-items-center" style="height: 20px; width:120px;;font-size: 15px;">No Cancelado</button></td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td class="text-nowrap">Angel Trejo, mesa 12</td>
+              <td><button type="button" class="btn btn-warning align-items-center d-flex justify-content-center" style="height: 20px; width:100px;;font-size: 15px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</button></td>
+              <td class="text-nowrap">S/. 35.70</td>
+              <td><button type="button" class="btn btn-success disabled d-flex justify-content-center align-items-center" style="height: 20px; width:120px;;font-size: 15px;">Cancelado</button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Manuel Merino, mesa 1</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <tr>
+              <th scope="row">1.</th>
+              <td>Saltado de Pollo</td>
+              <td>S/.20.00</td>
+            </tr>
+      </div>
+      <div class="modal-footer">
+          <div class="d-flex">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Total:</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">S/40.00</h1>
+          </div>
+     
+
+      </div>
+    </div>
+  </div>
+</div>
