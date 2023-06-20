@@ -38,38 +38,38 @@
 
 
 
-					<div class="mt-2 col-lg-2 col-md-4 col-sm-6  " style="height: 24%;"
-						*ngFor="let categoria of categorias">
-						<!-- *ngFor="let categoria of categorias" -->
+					<div class="mt-2 col-lg-2 col-md-4 col-sm-6  " style="height: 18vh;" *ngFor="let categoria of categorias">
+						
 						<div class=" card m-1 caja-1" type="button">
 							<div class="col-md-12 d-flex justify-content-center align-items-center">
 
-								<div class="col-md-3 d-flex justify-content-center align-items-center mt-2">
-									<div class="iconos3 btn" (click)="subirIdCategoria(categoria.idCategoria)">
-										<i class="fa-solid fa-pen cursor" data-bs-toggle="modal"
-											data-bs-target="#exampleModal2"></i>
+								<div class="col-md-3 d-flex justify-content-center align-items-center mt-1">
+									<div class="iconos3 btn d-flex justify-content-center align-items-center"  data-bs-toggle="modal"
+									data-bs-target="#exampleModal2" (click)="subirIdCategoria(categoria.idCategoria)">
+										<i class="fa-solid fa-pen cursor" style="font-size: 100%;"></i>
 									</div>
 								</div>
 
 								<div class="col-md-6 "></div>
 
-								<div class="col-md-3 d-flex justify-content-center align-items-center mt-2"
+								<div class="col-md-3 d-flex justify-content-center align-items-center mt-1"
 									style="margin-left: 2%;">
-									<div class="iconos3 btn" (click)="subirIdCategoria(categoria.idCategoria)">
-										<i class="fa-solid fa-trash cursor" data-bs-toggle="modal"
-											data-bs-target="#exampleModal3"></i>
+									<div class="iconos3 btn d-flex justify-content-center align-items-center" data-bs-toggle="modal"
+									data-bs-target="#exampleModal3" (click)="subirIdCategoria(categoria.idCategoria)" >
+										<i class="fa-solid fa-trash cursor" style="font-size: 100%;"></i>
 									</div>
 								</div>
 
 							</div>
-							<div style="height: 100%;" (click)="cambiarPlatillos(categoria.idCategoria)"
-								class="card-body d-flex justify-content-center text-center align-items-center">
-								<h5 class="card-title txt-1">
-									{{ categoria.nombreCategoria }}
+							<div style="height: 100%;"
+								class="card-body d-flex justify-content-center text-center align-items-center" (click)="cambiarPlatillos(categoria.idCategoria)">
+								<h5 class="card-title txt-1" style="margin-top: -15%;" {{ categoria.nombreCategoria }}>Gerson a la olla
 								</h5>
 							</div>
 						</div>
+
 					</div>
+					
 
 
 
