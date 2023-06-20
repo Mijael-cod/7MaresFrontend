@@ -3,40 +3,6 @@
 		<div class="row">
 			<div class="col-md-9 contenedor9" style="background-color: #E0E0E0; height: 88.7vh;">
 				<div class="row">
-					<!-- <div class="mt-2 col-lg-2 col-md-4 col-sm-6  " style="height: 24%;"
-						*ngFor="let categoria of categorias">
-						<div class=" card m-1 caja-1" type="button" (click)="cambiarPlatillos(categoria.idCategoria)">
-							<div class="col-md-12 d-flex justify-content-center align-items-center">
-								<div class="col-md-3 d-flex justify-content-center align-items-center mt-2">
-									<div class="iconos3">
-										<i class="fa-solid fa-pen cursor" data-bs-toggle="modal"
-											data-bs-target="#exampleModal2"></i>
-									</div>
-								</div>
-
-								<div class="col-md-6 "></div>
-
-								<div class="col-md-3 d-flex justify-content-center align-items-center mt-2"
-									style="margin-left: 2%;" (click)="subirIdCategoria(categoria.idCategoria)">
-									<div class="iconos3 btn">
-										<i class="fa-solid fa-trash cursor" data-bs-toggle="modal"
-											data-bs-target="#exampleModal3"></i>
-									</div>
-								</div>
-
-							</div>
-							<div style="height: 100%;"
-								class="card-body d-flex justify-content-center text-center align-items-center">
-								<h5 class="card-title txt-1">
-									{{ categoria.nombreCategoria }}
-								</h5>
-							</div>
-						</div>
-					</div> -->
-
-
-
-
 
 					<div class="mt-2 col-lg-2 col-md-4 col-sm-6  " style="height: 18vh;" *ngFor="let categoria of categorias">
 						
@@ -63,13 +29,12 @@
 							</div>
 							<div style="height: 100%;"
 								class="card-body d-flex justify-content-center text-center align-items-center" (click)="cambiarPlatillos(categoria.idCategoria)">
-								<h5 class="card-title txt-1" style="margin-top: -15%;" {{ categoria.nombreCategoria }}>Gerson a la olla
+								<h5 class="card-title txt-1" style="margin-top: -15%;">{{ categoria.nombreCategoria }}
 								</h5>
 							</div>
 						</div>
 
-					</div>
-					
+					</div>			
 
 
 
@@ -143,7 +108,7 @@
 									<button type="button" class="btn btn-danger bt-n btn-2"
 										data-bs-dismiss="modal">Salir</button>
 
-									<button type="submit" class="btn btn-success bt-n btn-1">Guardar</button>
+									<button type="submit" class="btn btn-success bt-n btn-1" (click)="recargarPagina()" data-bs-dismiss="modal">Guardar</button>
 								</div>
 							</div>
 						</form>
@@ -171,7 +136,7 @@
 								<div class="modal-footer boton-new">
 									<button type="button" class="btn btn-danger bt-n btn-2"
 										data-bs-dismiss="modal">Salir</button>
-									<button type="submit" class="btn btn-success bt-n btn-1">Actualizar</button>
+									<button type="submit" class="btn btn-success bt-n btn-1" (click)="recargarPagina()" data-bs-dismiss="modal">Actualizar</button>
 								</div>
 
 							</div>
@@ -192,7 +157,7 @@
 							</div>
 							<div class="modal-footer boton-new">
 								<button type="button" class="btn btn-success bt-n btn-1" data-bs-dismiss="modal"
-									(click)="eliminarCategoria()">Confirmar</button>
+									(click)="eliminarCategoria()" (click)="recargarPagina()" >Confirmar</button>
 								<button type="button" class="btn btn-danger bt-n btn-2">Cancelar</button>
 							</div>
 						</div>

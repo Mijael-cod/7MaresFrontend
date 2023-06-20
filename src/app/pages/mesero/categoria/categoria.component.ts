@@ -87,6 +87,11 @@ export class CategoriaComponent implements OnInit {
     this.router.navigate(['/mesero-panel/platillo'])
   }
 
+  recargarPagina(){
+    window.location.reload();
+  }
+
+
   subirIdCategoria(idCat: number) {
     localStorage.setItem('idCat', idCat.toString())
   }
