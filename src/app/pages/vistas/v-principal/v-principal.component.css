@@ -144,4 +144,12 @@ body {
     }
   }
 
+  .arrow {
+    display: inline-block;
+    width: 5px !important; /* Ancho reducido de la flecha */
+    height: 5px !important; /* Altura reducida de la flecha */
+    border-top: 2px solid black; /* Estilos de línea de la flecha */
+    border-right: 2px solid black; /* Estilos de línea de la flecha */
+    transform: rotate(-65deg); /* Rotación de la flecha */
+  }
  
