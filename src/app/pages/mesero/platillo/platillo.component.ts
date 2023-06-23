@@ -15,6 +15,10 @@ export class PlatilloComponent implements OnInit {
   platillos: Platillos[] = [];
   platillosDto: PlatillosDto[] = [];
   platilloDto: PlatillosDto = new PlatillosDto();
+  nombrePlatillo: string;
+  costoPlatillo: number;
+  opcionesSeleccionadas: any[] = [];
+  etiquetasGeneradas: any[] = [];
 
   constructor(private router: Router, private meseroService: MeseroService) { }
 
@@ -94,6 +98,26 @@ export class PlatilloComponent implements OnInit {
     this.router.navigate(['/mesero-panel/categoria'])
   }
 
+  mostrarDatos(nombrePlatillo: string, costoPlatillo: number) {
 
+    this.nombrePlatillo = nombrePlatillo;
+    this.costoPlatillo = costoPlatillo;
+  }
+
+  agregarEtiqueta(nombrePlatillo: string, costoPlatillo: number) {
+    const etiqueta = {
+      nombrePlatillo: nombrePlatillo,
+      costoPlatillo: costoPlatillo
+    };
+    
+    this.etiquetasGeneradas.push(etiqueta);
+  }
+
+  eliminarEtiqueta(etiqueta: any) {
+    const index = this.etiquetasGeneradas.indexOf(etiqueta);
+    if (index !== -1) {
+      this.etiquetasGeneradas.splice(index, 1);
+    }
+  }
 
 }
