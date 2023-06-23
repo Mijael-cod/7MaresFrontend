@@ -10,9 +10,4 @@
     margin-top: 10px;
 }
 
-  /* Media Query para ocultar la barra lateral en dispositivos con ancho menor a 768px */
-  @media screen and (max-width: 768px) {
-    .sidebar {
-      display: none;
-    }
-  }
+ 

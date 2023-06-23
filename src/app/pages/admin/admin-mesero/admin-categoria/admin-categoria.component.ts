@@ -14,8 +14,8 @@ import { MeseroService } from 'src/app/services/mesero.service';
 
 export class AdminCategoriaComponent implements OnInit {
 
-  categorias: Categorias [] = [];
-  platillosDto: PlatillosDto [] = [];
+  categorias: Categorias[] = [];
+  platillosDto: PlatillosDto[] = [];
   categoriaDto: CategoriaDto = new CategoriaDto;
 
   constructor(private router: Router, private meseroService: MeseroService) { }
@@ -46,6 +46,7 @@ export class AdminCategoriaComponent implements OnInit {
           console.log(err);
         }
       })
+    window.location.reload();
   }
 
   editarCategoria(event: Event) {
@@ -63,6 +64,7 @@ export class AdminCategoriaComponent implements OnInit {
             console.log(err);
           }
         })
+    window.location.reload();
   }
 
   eliminarCategoria() {
@@ -79,6 +81,7 @@ export class AdminCategoriaComponent implements OnInit {
           console.log(err);
         }
       })
+    window.location.reload();
   }
 
   cambiarAdminPlatillos(idCategoria: number) {
@@ -86,13 +89,9 @@ export class AdminCategoriaComponent implements OnInit {
     localStorage.setItem('idCategoria', idCategoria.toString())
     this.router.navigate(['/admin-panel/admin-platillo'])
   }
-  
-  recargarPagina() {
-    window.location.reload();
-  }
 
   subirIdCategoria(idCat: number) {
     localStorage.setItem('idCat', idCat.toString())
   }
-  
+
 }

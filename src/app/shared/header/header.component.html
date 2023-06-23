@@ -1,22 +1,147 @@
-<nav class="navbar navbar-expand-lg  color-nav">
+<nav class="navbar navbar-expand-md color-nav">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="/mesero">
-			<img src="assets/img/logo7mares.jpg" alt="" width="40" height="40" class="d-inline-block align-text-top">
-		</a>
-		<a class="navbar-brand color-white" href="/mares">Mesero</a>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-			</ul>
-			<form class="d-flex" role="search">
-				<div class="d-flex">
-					<a class="navbar-brand color-white mt-1" href="/mesero">Lucia Tiravanti</a>
-					<a class="navbar-brand" href="/mesero">
-						<img src="assets/img/avatar.png" alt="" width="40" height="40"
-							class="d-inline-block align-text-top">
+		<div class="ms-4">
+			<a class="navbar-brand d-flex gap-3">
+				<img src="assets/img/logo7mares.jpg" alt="" width="40" height="40"
+					class="d-inline-block align-text-top">
+				<a class="navbar-brand color-white d-md-inline" href="/mares">Mesero</a>
+			</a>
+		</div>
+		<form class="d-flex navbar-brand color-white d-none d-md-inline">
+			<div class="d-flex">
+				<a class="navbar-brand color-white mt-1 " href="/mesero">Lucia Tiravanti</a>
+				<a class="navbar-brand" href="/mesero">
+					<img src="assets/img/avatar.png" alt="" width="40" height="40"
+						class="d-inline-block align-text-top">
+				</a>
+			</div>
+		</form>
+		<button class="navbar-toggler bg-info" type="button" data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse d-md-none bg-light Bordess shadow position-absolute top-100 start-0 w-100"
+			id="navbarSupportedContent" style="z-index: 1;">
+			<ul class="navbar-nav me-auto mb-2 p-3 mb-md-0 d-md-none">
+				<li class="nav-item" (click)="irPagosTotal()">
+					<a href="#sidecajeropagos1" data-bs-toggle="collapse"
+						class="nav-link text-dark" aria-current="page">
+						<i class="fa-solid fa-cash-register"></i>
+						<span>Pagos</span>
 					</a>
-				</div>
+				</li>
+				<li class="nav-item">
+					<a href="#sidemenu1" data-bs-toggle="collapse" class="nav-link text-dark"
+						aria-current="page">
+						<i class="fa-solid fa-chart-line"></i>
+						<span>Diario </span>
+						<i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="nav collapse ms-1 flex-column" id="sidemenu1" data-bs-parent="#menu1">
+						<li class="nav-item" (click)="irDiagraPastelDiario()">
+							<a type="button" class="nav-link text-dark" aria-current="page">
+								<i class="fa-solid fa-chart-pie"></i> Diagrama Pastel
+							</a>
+						</li>
+						<li class="nav-item" (click)="irDiagraBarraDiario()">
+							<a class="nav-link text-dark" type="button">
+								<i class="fa-solid fa-chart-simple"></i> Diagrama Barras
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item my-sm-1 my-2 disabled">
+					<a href="#sidemenu2" data-bs-toggle="collapse"
+						class="nav-link text-dark" aria-current="page">
+						<i class="fa-solid fa-chart-line"></i>
+						<span>Semananal </span>
+						<i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="nav collapse ms-1 flex-column" id="sidemenu2" data-bs-parent="#menu2">
+						<li class="nav-item"  (click)="irDiagraPastelSemanal()">
+							<a type="button" class="nav-link text-dark" aria-current="page">
+								<i class="fa-solid fa-chart-pie"></i> Diagrama Pastel
+							</a>
+						</li>
+						<li class="nav-item"  (click)="irDiagraBarraSemanal()">
+							<a type="button" class="nav-link text-dark" >
+								<i class="fa-solid fa-chart-simple"></i> Diagrama Barras
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item my-sm-1 my-2 disabled">
+					<a href="#sidemenu3" data-bs-toggle="collapse"
+						class="nav-link text-dark" aria-current="page">
+						<i class="fa-solid fa-chart-line"></i>
+						<span>Mensual </span>
+						<i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="nav collapse ms-1 flex-column" id="sidemenu3" data-bs-parent="#menu3">
+						<li class="nav-item" (click)="irDiagraPastelMensual()">
+							<a class="nav-link text-dark" type="button" aria-current="page">
+								<i class="fa-solid fa-chart-pie"></i> Diagrama Pastel
+							</a>
+						</li>
+						<li class="nav-item" (click)="irDiagraBarraMensual()">
+							<a type="button" class="nav-link text-dark">
+								<i class="fa-solid fa-chart-simple"></i> Diagrama Barras
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item my-sm-1 my-2 disabled">
+					<a href="#sidemenuCocinero1" data-bs-toggle="collapse"
+						class="nav-link text-dark" aria-current="page">
+						<i class="fa-brands fa-hotjar"></i>
+						<span>Comidas Calientes </span>
+						<i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="nav collapse ms-1 flex-column" id="sidemenuCocinero1"
+						data-bs-parent="#menuCocinero1">
+						<li class="nav-item" (click)="irRecibidoCaliente()">
+							<a  type="button" class="nav-link text-dark"  aria-current="page">
+								<i class="fa-solid fa-file-import"></i> Recibidos
+							</a>
+						</li>
+						<li class="nav-item" (click)="irListoCaliente()">
+							<a  type="button"class="nav-link text-dark">
+								<i class="fa-solid fa-file-circle-check"></i> Listos
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item my-sm-1 my-2 disabled">
+					<a href="#sidemenuCocinero2" data-bs-toggle="collapse"
+						class="nav-link text-dark" aria-current="page">
+						<i class="fa-regular fa-snowflake"></i>
+						<span>Comidas Frias </span>
+						<i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="nav collapse ms-1 flex-column" id="sidemenuCocinero2"
+						data-bs-parent="#menuCocinero2">
+						<li class="nav-item" (click)="irRecibidoFrio()">
+							<a  type="button" class="nav-link text-dark" aria-current="page">
+								<i class="fa-solid fa-file-import"></i> Recibidos
+							</a>
+						</li>
+						<li class="nav-item" (click)="irListoFrio()">
+							<a  type="button" class="nav-link text-dark" >
+								<i class="fa-solid fa-file-circle-check"></i> Listos
+							</a>
+						</li>
+					</ul>
+				</li>
 
-			</form>
+				<li class="nav-item my-sm-1 my-2 " (click)="irCategoriaPlatillo()">
+
+					<a href="#sidecajeropagos1" data-bs-toggle="collapse" class="nav-link text-dark" aria-current="page">
+						<i class="fa-solid fa-utensils"></i>
+						<span>Platos</span>
+					</a>					
+				</li>
+			</ul>
 		</div>
 	</div>
 </nav>

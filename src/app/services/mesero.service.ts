@@ -38,4 +38,15 @@ export class MeseroService {
     return this.http.get(`${this.endpoint}/platillos/listarPlatillosPorIdDeCategoria/${idCategoria}`);
   }
 
+  agregarPlatillos(platillosDto: PlatillosDto) {
+    return this.http.post(`${this.endpoint}/platillos/agregarPlatillos`, platillosDto)
+  }
+
+  editarPlatillo(platillosDto: PlatillosDto, id: number) {
+    return this.http.put<PlatillosDto>(`${this.endpoint}/platillos/editarPlatillo/${id}`, platillosDto);
+  }
+
+  eliminarPlatillo(idPlatillo: number){
+    return this.http.delete(`${this.endpoint}/platillos/eliminarPlatillo/${idPlatillo}`)
+  }
 }

@@ -46,6 +46,7 @@ export class CategoriaComponent implements OnInit {
           console.log(err);
         }
       })
+    window.location.reload();
   }
 
   editarCategoria(event: Event) {
@@ -63,6 +64,8 @@ export class CategoriaComponent implements OnInit {
             console.log(err);
           }
         })
+
+    window.location.reload();
   }
 
   eliminarCategoria() {
@@ -79,6 +82,7 @@ export class CategoriaComponent implements OnInit {
           console.log(err);
         }
       })
+    window.location.reload();
   }
 
   cambiarPlatillos(idCategoria: number) {
@@ -87,13 +91,10 @@ export class CategoriaComponent implements OnInit {
     this.router.navigate(['/mesero-panel/platillo'])
   }
 
-  recargarPagina(){
-    window.location.reload();
-  }
-
-
   subirIdCategoria(idCat: number) {
     localStorage.setItem('idCat', idCat.toString())
   }
 
+
 }
+

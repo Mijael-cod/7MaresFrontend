@@ -8,5 +8,8 @@ export class PlatillosDto {
     categorias: number;
     tipoPlatillo: number;
 
+    constructor(){
+      this.estadoPlatillo = 1;
+    }
 
 }
