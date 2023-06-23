@@ -1,127 +1,179 @@
 <div style="background-color: #E0E0E0;">
-    <br>
-    <br>
-    <div class="d-flex justify-content-center align-items-center">
-      <div class="row container-fluid d-flex justify-content-center"
-        style=" background-color: white; border-radius: 15px;">
-        <div class="col-md-11" style="background-color: #3FB785; margin-top: -22px;">
-          <h5 style="color:white; height: 45px; margin-left: 2%;" class="d-flex align-items-center">Registrar personal</h5>
-        </div>
-        
-        <div class="container mt-4">
+  <br>
+  <br>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="row container-fluid d-flex justify-content-center"
+      style=" background-color: white; border-radius: 15px;">
+      <div class="col-md-11" style="background-color: #3FB785; margin-top: -22px;">
+        <h5 style="color:white; height: 45px; margin-left: 2%;" class="d-flex align-items-center">Registrar personal
+        </h5>
+      </div>
 
-            <form class="well form-horizontal" action=" " method="post"  id="contact_form">
-        <fieldset>
-        
-        <!-- Text input-->
-        
-        <div class="form-group">
-          <label class="col-md-4 control-label"><strong>Nº Documento:</strong></label>  
-          <div class="col-md-4 inputGroupContainer">
-          <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input  name="Ingresedni" placeholder="Ingrese el DNI" class="form-control"  type="" required>
+      <div class="container mt-3">
+
+        <form class="well form-horizontal" action=" " method="post" id="contact_form">
+          <fieldset class="row d-flex justify-content-center align-items-center">
+
+            <!-- Text input-->
+            <div class="row col-sm-12 col-sm-12 col-md-9 ">
+
+              <div class="form-group col-sm-12 col-sm-12 col-md-6 mt-2">
+                <label class=" control-label"><strong>Nº Documento:</strong></label>
+                <div class=" inputGroupContainer mt-1">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="Ingresedni" placeholder="Ingrese el DNI" class="form-control" type=""
+                      style="border-radius: 15px;" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Text input-->
+
+              <div class="form-group col-sm-12 col-sm-12 col-md-6 mt-2">
+                <label class="control-label"><strong>Nombres:</strong></label>
+                <div class=" inputGroupContainer mt-1">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="names" placeholder="Ingrese los nombres" class="form-control" type=""
+                      style="border-radius: 15px;" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Text input-->
+
+              <div class="form-group col-sm-12 col-sm-12 col-md-6 mt-2">
+                <label class=" control-label"><strong>Apellido Paterno:</strong></label>
+                <div class=" inputGroupContainer mt-1">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="last_name1" placeholder="El apellido paterno" class="form-control" type="text"
+                      style="border-radius: 15px;" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col-sm-12 col-sm-12 col-md-6 mt-2">
+                <label class="control-label"><strong>Apellido Materno:</strong></label>
+                <div class=" inputGroupContainer mt-1">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="last_name1" placeholder="El apellido paterno" class="form-control" type="text"
+                      style="border-radius: 15px;" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="form-group col-sm-12 col-sm-12 col-md-12 mt-2">
+                <label class=" control-label"><strong>Correo:</strong></label>
+                <div class="inputGroupContainer mt-1">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input name="email" placeholder="Ingresar correo" class="form-control" type="text"
+                      style="border-radius: 15px;" required>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Text input-->
+
+              <div class="form-group col-sm-12 col-sm-12 col-md-6 mt-2">
+                <label class=" control-label"><strong>Nro Celular:</strong></label>
+                <div class=" inputGroupContainer mt-1">
+                  <div class="input-group">
+                    <span class="input-group-addon"></span>
+                    <input name="phone" placeholder="696969696" class="form-control" type="text"
+                      style="border-radius: 15px;" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Select Basic -->
+
+              <div class="form-group col-sm-12 col-sm-12 col-md-6 mt-2">
+                <label class=" control-label"><strong>Estado:</strong></label>
+                <div class=" selectContainer mt-1">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="state" class="form-control selectpicker" style="border-radius: 15px;" required>
+                      <option value="">Escoja el estado del usuario</option>
+                      <option>Activo</option>
+                      <option>Inactivo</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col-sm-12 col-sm-12 col-md-6 mt-2">
+                <label class=" control-label"><strong>Rol:</strong></label>
+                <div class="selectContainer mt-1">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="state" class="form-control selectpicker" style="border-radius: 15px;" required>
+                      <option>Cocinero</option>
+                      <option>Cajero</option>
+                      <option>Administrador</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
             </div>
-          </div>
-        </div>
 
-         <!-- Text input-->
+            
+            <div class="col-md-11 mt-5" style="background-color: #3FB785;">
+              <h5 style="color:white; height: 45px; margin-left: 2%;" class="d-flex align-items-center">Datos de acceso
+              </h5>
+            </div>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label"><strong>Nombres:</strong></label>  
-            <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input  name="names" placeholder="Ingrese los nombres" class="form-control"  type="" required>
+
+            <div class="row col-sm-12 col-sm-12 col-md-9 mt-3">
+
+              <div class="form-group col-sm-12 col-sm-12 col-md-6 mt-2">
+                <label class=" control-label"><strong>Usuario:</strong></label>
+                <div class=" inputGroupContainer mt-1">
+                  <div class="input-group">
+                    <span class="input-group-addon"></span>
+                    <input name="NameUsuario" placeholder="Ingrese nombre del usuario" class="form-control" type=""
+                      style="border-radius: 15px;" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col-sm-12 col-sm-12 col-md-6 mt-2">
+                <label class=" control-label"><strong>Contraseña:</strong></label>
+                <div class=" inputGroupContainer mt-1">
+                  <div class="input-group">
+                    <span class="input-group-addon"></span>
+                    <input name="Contra" placeholder="Ingrese la contraseña" class="form-control" type="password"
+                      style="border-radius: 15px;" required>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Button --> 
+            <div class="col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center align-items-center">
+            <div class="form-group">
+              <label class="control-label"></label>
+              <div>
+                <button type="submit" style="color:white; background-color: #3FB785; border-radius: 18px; width: 120px; " class="btn btn">Registrar
+                  <span class="glyphicon glyphicon-send"></span></button>
               </div>
             </div>
           </div>
-        
-        <!-- Text input-->
-        
-        <div class="form-group">
-          <label class="col-md-4 control-label" ><strong>Apellido Paterno:</strong></label> 
-            <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input name="last_name1" placeholder="El apellido paterno" class="form-control"  type="text" required>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Text input-->
-               <div class="form-group">
-          <label class="col-md-4 control-label">Correo</label>  
-            <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-          <input name="email" placeholder="Ingresar correo" class="form-control"  type="text" required>
-            </div>
-          </div>
-        </div>
-        
-        
-        <!-- Text input-->
-               
-        <div class="form-group">
-          <label class="col-md-4 control-label">Nro Celular</label>  
-            <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-          <input name="phone" placeholder="696969696" class="form-control" type="text" required>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Select Basic -->
-           
-        <div class="form-group"> 
-          <label class="col-md-4 control-label">State</label>
-            <div class="col-md-4 selectContainer">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="form-control selectpicker" >
-              <option value="">Escoja el estado del usuario</option>
-              <option >Activo</option>
-              <option >Inactivo</option>
-            </select>
-          </div>
-        </div>
-        </div>
 
-        <div class="form-group"> 
-            <label class="col-md-4 control-label">Rol:</label>
-              <div class="col-md-4 selectContainer">
-              <div class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-              <select name="state" class="form-control selectpicker" required>
-                <option value="">Eliga su rol</option>
-                <option >Mesero</option>
-                <option >Cocinero</option>
-                <option >Cajero</option>
-                <option >Administrador</option>
-              </select>
-            </div>
-          </div>
-          </div>
-    
-        <!-- Success message -->
-        <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
-        
-        <!-- Button -->
-        <div class="form-group">
-          <label class="col-md-4 control-label"></label>
-          <div class="col-md-4">
-            <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
-          </div>
-        </div>
-        
-        </fieldset>
+          </fieldset>
+          <br>
         </form>
-        </div>
-
-
-
       </div>
+
+
+
     </div>
   </div>
+</div>
