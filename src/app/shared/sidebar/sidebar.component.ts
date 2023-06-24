@@ -68,6 +68,10 @@ export class SidebarComponent implements OnInit {
     this.router.navigate(['/admin-panel/admin-categoria'])
   }
 
+  irRegistro() {
+    this.router.navigate(['/admin-panel/admin-registro'])
+  }
+
 
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;
