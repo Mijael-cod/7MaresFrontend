@@ -27,12 +27,12 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-irPagosTotal() {
+  irPagosTotal() {
     this.router.navigate(['/admin-panel/pagos-total'])
   }
 
 
-  
+
   irDiagraBarraDiario() {
     this.router.navigate(['/admin-panel/diagra-barras-diario'])
   }
@@ -66,7 +66,7 @@ irPagosTotal() {
   irRecibidoCaliente() {
     this.router.navigate(['/admin-panel/recibidos-caliente'])
   }
-  
+
   irListoFrio() {
     this.router.navigate(['/admin-panel/listos-frio'])
   }
@@ -78,5 +78,9 @@ irPagosTotal() {
 
   irCategoriaPlatillo() {
     this.router.navigate(['/admin-panel/admin-categoria'])
+  }
+
+  irRegistro() {
+    this.router.navigate(['/admin-panel/admin-registro'])
   }
 }

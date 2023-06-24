@@ -20,7 +20,7 @@ export class SidebarComponent implements OnInit {
   }
 
 
-  
+
   irDiagraBarraDiario() {
     this.router.navigate(['/admin-panel/diagra-barras-diario'])
   }
@@ -54,7 +54,7 @@ export class SidebarComponent implements OnInit {
   irRecibidoCaliente() {
     this.router.navigate(['/admin-panel/recibidos-caliente'])
   }
-  
+
   irListoFrio() {
     this.router.navigate(['/admin-panel/listos-frio'])
   }

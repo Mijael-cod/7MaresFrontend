@@ -23,19 +23,18 @@
 		</button>
 		<div class="collapse navbar-collapse d-md-none bg-light Bordess shadow position-absolute top-100 start-0 w-100"
 			id="navbarSupportedContent" style="z-index: 1;">
-			<ul class="navbar-nav me-auto mb-2 p-3 mb-md-0 d-md-none">
+			<ul class="navbar-nav mb-2 p-3 d-md-none nav-pills">
 				<li class="nav-item" (click)="irPagosTotal()">
-					<a href="#sidecajeropagos1" data-bs-toggle="collapse"
-						class="nav-link text-dark" aria-current="page">
+					<a href="#sidecajeropagos1" data-bs-toggle="collapse" class="nav-link text-dark"
+						aria-current="page">
 						<i class="fa-solid fa-cash-register"></i>
-						<span>Pagos</span>
+						<span class="ms-2">Pagos</span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="#sidemenu1" data-bs-toggle="collapse" class="nav-link text-dark"
-						aria-current="page">
+					<a href="#sidemenu1" data-bs-toggle="collapse" class="nav-link text-dark" aria-current="page">
 						<i class="fa-solid fa-chart-line"></i>
-						<span>Diario </span>
+						<span class="ms-2">Diario </span>
 						<i class="fa fa-caret-down"></i>
 					</a>
 					<ul class="nav collapse ms-1 flex-column" id="sidemenu1" data-bs-parent="#menu1">
@@ -52,30 +51,28 @@
 					</ul>
 				</li>
 				<li class="nav-item my-sm-1 my-2 disabled">
-					<a href="#sidemenu2" data-bs-toggle="collapse"
-						class="nav-link text-dark" aria-current="page">
+					<a href="#sidemenu2" data-bs-toggle="collapse" class="nav-link text-dark" aria-current="page">
 						<i class="fa-solid fa-chart-line"></i>
-						<span>Semananal </span>
+						<span class="ms-2">Semananal </span>
 						<i class="fa fa-caret-down"></i>
 					</a>
 					<ul class="nav collapse ms-1 flex-column" id="sidemenu2" data-bs-parent="#menu2">
-						<li class="nav-item"  (click)="irDiagraPastelSemanal()">
+						<li class="nav-item" (click)="irDiagraPastelSemanal()">
 							<a type="button" class="nav-link text-dark" aria-current="page">
 								<i class="fa-solid fa-chart-pie"></i> Diagrama Pastel
 							</a>
 						</li>
-						<li class="nav-item"  (click)="irDiagraBarraSemanal()">
-							<a type="button" class="nav-link text-dark" >
+						<li class="nav-item" (click)="irDiagraBarraSemanal()">
+							<a type="button" class="nav-link text-dark">
 								<i class="fa-solid fa-chart-simple"></i> Diagrama Barras
 							</a>
 						</li>
 					</ul>
 				</li>
 				<li class="nav-item my-sm-1 my-2 disabled">
-					<a href="#sidemenu3" data-bs-toggle="collapse"
-						class="nav-link text-dark" aria-current="page">
+					<a href="#sidemenu3" data-bs-toggle="collapse" class="nav-link text-dark" aria-current="page">
 						<i class="fa-solid fa-chart-line"></i>
-						<span>Mensual </span>
+						<span class="ms-2">Mensual </span>
 						<i class="fa fa-caret-down"></i>
 					</a>
 					<ul class="nav collapse ms-1 flex-column" id="sidemenu3" data-bs-parent="#menu3">
@@ -92,54 +89,63 @@
 					</ul>
 				</li>
 				<li class="nav-item my-sm-1 my-2 disabled">
-					<a href="#sidemenuCocinero1" data-bs-toggle="collapse"
-						class="nav-link text-dark" aria-current="page">
+					<a href="#sidemenuCocinero1" data-bs-toggle="collapse" class="nav-link text-dark"
+						aria-current="page">
 						<i class="fa-brands fa-hotjar"></i>
-						<span>Comidas Calientes </span>
+						<span class="ms-2">Comidas Calientes </span>
 						<i class="fa fa-caret-down"></i>
 					</a>
-					<ul class="nav collapse ms-1 flex-column" id="sidemenuCocinero1"
-						data-bs-parent="#menuCocinero1">
+					<ul class="nav collapse ms-1 flex-column" id="sidemenuCocinero1" data-bs-parent="#menuCocinero1">
 						<li class="nav-item" (click)="irRecibidoCaliente()">
-							<a  type="button" class="nav-link text-dark"  aria-current="page">
+							<a type="button" class="nav-link text-dark" aria-current="page">
 								<i class="fa-solid fa-file-import"></i> Recibidos
 							</a>
 						</li>
 						<li class="nav-item" (click)="irListoCaliente()">
-							<a  type="button"class="nav-link text-dark">
+							<a type="button" class="nav-link text-dark">
 								<i class="fa-solid fa-file-circle-check"></i> Listos
 							</a>
 						</li>
 					</ul>
 				</li>
 				<li class="nav-item my-sm-1 my-2 disabled">
-					<a href="#sidemenuCocinero2" data-bs-toggle="collapse"
-						class="nav-link text-dark" aria-current="page">
+					<a href="#sidemenuCocinero2" data-bs-toggle="collapse" class="nav-link text-dark"
+						aria-current="page">
 						<i class="fa-regular fa-snowflake"></i>
-						<span>Comidas Frias </span>
+						<span class="ms-2">Comidas Frias </span>
 						<i class="fa fa-caret-down"></i>
 					</a>
-					<ul class="nav collapse ms-1 flex-column" id="sidemenuCocinero2"
-						data-bs-parent="#menuCocinero2">
+					<ul class="nav collapse ms-1 flex-column" id="sidemenuCocinero2" data-bs-parent="#menuCocinero2">
 						<li class="nav-item" (click)="irRecibidoFrio()">
-							<a  type="button" class="nav-link text-dark" aria-current="page">
+							<a type="button" class="nav-link text-dark" aria-current="page">
 								<i class="fa-solid fa-file-import"></i> Recibidos
 							</a>
 						</li>
 						<li class="nav-item" (click)="irListoFrio()">
-							<a  type="button" class="nav-link text-dark" >
+							<a type="button" class="nav-link text-dark">
 								<i class="fa-solid fa-file-circle-check"></i> Listos
 							</a>
 						</li>
 					</ul>
 				</li>
 
-				<li class="nav-item my-sm-1 my-2 " (click)="irCategoriaPlatillo()">
+				<li class="nav-item my-sm-1 my-2" (click)="irCategoriaPlatillo()">
 
-					<a href="#sidecajeropagos1" data-bs-toggle="collapse" class="nav-link text-dark" aria-current="page">
+					<a href="#sidecajeropagos1" data-bs-toggle="collapse" class="nav-link text-dark"
+						aria-current="page">
 						<i class="fa-solid fa-utensils"></i>
-						<span>Platos</span>
-					</a>					
+						<span class="ms-2">Platos</span>
+					</a>
+				</li>
+
+				<li class="nav-item my-sm-1 my-2 " (click)="irRegistro()">
+
+					<a href="#sidecajeropagos1" data-bs-toggle="collapse" class="nav-link text-dark"
+						aria-current="page">
+						<i class="fa-solid fa-address-card"></i>
+						<span class="ms-2">Registrar personal</span>
+					</a>
+
 				</li>
 			</ul>
 		</div>
