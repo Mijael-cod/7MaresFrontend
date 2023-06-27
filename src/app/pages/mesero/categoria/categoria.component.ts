@@ -41,7 +41,6 @@ export class CategoriaComponent implements OnInit {
       .subscribe({
         next: (resp: any) => {
           console.log(resp);
-
         }, error: (err) => {
           console.log(err);
         }
@@ -64,7 +63,6 @@ export class CategoriaComponent implements OnInit {
             console.log(err);
           }
         })
-
     window.location.reload();
   }
 
