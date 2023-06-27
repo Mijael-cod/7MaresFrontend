@@ -1,5 +1,7 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GoogleApiService, UserInfo } from 'src/app/services/google-api.service';
+
 
 @Component({
   selector: 'app-header',
@@ -9,12 +11,29 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   private colapso: HTMLElement;
 
+  title = 'login7mares';
+
+  mailSnippets: string[] = []
+  userInfo?: UserInfo
+
   constructor(
-    
+    private readonly googleApi: GoogleApiService,
     private elementRef: ElementRef,
     private router: Router,
+  ) {
+    googleApi.userProfileSubject.subscribe(info => {
+      this.userInfo = info
+    })
+  }
 
-    ) {}
+  isLoggedIn(): boolean {
+    return this.googleApi.isLoggedIn()
+  }
+
+  logout() {
+    this.googleApi.signOut()
+  }
+  
 
   ngOnInit() {
     this.colapso = this.elementRef.nativeElement.querySelector('#navbarSupportedContent');

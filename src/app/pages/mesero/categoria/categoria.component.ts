@@ -19,7 +19,10 @@ export class CategoriaComponent implements OnInit {
   platillosDto: PlatillosDto[] = [];
   categoriaDto: CategoriaDto = new CategoriaDto();
 
-  constructor(private router: Router, private meseroService: MeseroService) { }
+  constructor(
+    private router: Router,
+    private meseroService: MeseroService,
+  ) { }
 
   ngOnInit(): void {
     this.listarCategorias();

@@ -9,10 +9,9 @@
 		</div>
 		<form class="d-flex navbar-brand color-white d-none d-md-inline">
 			<div class="d-flex">
-				<a class="navbar-brand color-white mt-1 " href="/mesero">Lucia Tiravanti</a>
+				<a class="navbar-brand color-white mt-1 " href="/mesero">{{ userInfo?.info?.name }}</a>
 				<a class="navbar-brand" href="/mesero">
-					<img src="assets/img/avatar.png" alt="" width="40" height="40"
-						class="d-inline-block align-text-top">
+						<img width="40" height="40" class="d-inline-block align-text-top" src="{{ userInfo?.info?.picture }}">
 				</a>
 			</div>
 		</form>

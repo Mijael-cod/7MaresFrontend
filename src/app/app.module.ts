@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { AdminModule } from './pages/admin/admin.module';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 
 
@@ -19,6 +20,7 @@ import { AdminModule } from './pages/admin/admin.module';
   imports: [
     BrowserModule,
     HttpClientModule,
+    OAuthModule.forRoot(),
     AppRoutingModule,
     SharedModule,
     PagesModule,
