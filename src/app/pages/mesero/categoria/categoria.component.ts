@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ServiceResponse } from 'src/app/interfaces/ServiceResponse .interface';
 import { CategoriaDto } from 'src/app/models/CategoriaDto.model';
 import { Categorias } from 'src/app/models/Categorias.model';
+import { Cliente } from 'src/app/models/Cliente.model';
+import { ClienteDto } from 'src/app/models/ClienteDto.model';
 import { PlatillosDto } from 'src/app/models/PlatillosDto.model';
 import { MeseroService } from 'src/app/services/mesero.service';
 
@@ -15,14 +17,19 @@ import { MeseroService } from 'src/app/services/mesero.service';
 
 export class CategoriaComponent implements OnInit {
 
+  resultado: any;
   categorias: Categorias[] = [];
   platillosDto: PlatillosDto[] = [];
   categoriaDto: CategoriaDto = new CategoriaDto();
+  cliente: Cliente[] = [];
+  clientesDto: ClienteDto[] = [];
+  clienteDto: ClienteDto = new ClienteDto();
 
   constructor(private router: Router, private meseroService: MeseroService) { }
 
   ngOnInit(): void {
     this.listarCategorias();
+    this.listarClientePorId();
   }
 
   listarCategorias() {
@@ -94,5 +101,36 @@ export class CategoriaComponent implements OnInit {
   }
 
 
+  listarClientePorId() {
+    const id = localStorage.getItem('ClienteAgregado');
+    this.meseroService.listarClientePorId(+id).subscribe({
+      next: (response: any) => {
+        this.resultado = response.data;
+      },
+      error: (error) => {
+        console.log(error); // Maneja el error si es necesario
+        console.log("error");
+      }
+    });
+    
+  }
+
+  agregarCliente(event: Event) {
+    const id = localStorage.getItem('id');
+    this.meseroService.agregarCliente(this.clienteDto)
+      .subscribe({
+        next: (resp: any) => {
+          const idClienteAgregado = resp.data.idCliente;
+          console.log("este es ID  ", +idClienteAgregado)
+          localStorage.setItem('ClienteAgregado', idClienteAgregado);
+          console.log(resp);
+        },
+        error: (err) => {
+          console.log(err);
+          console.log("ERROR")
+        }
+      });
+      window.location.reload();
+  }
 }
 

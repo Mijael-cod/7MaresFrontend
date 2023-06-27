@@ -14,6 +14,7 @@ import { MeseroService } from 'src/app/services/mesero.service';
 })
 export class PlatilloComponent implements OnInit {
 
+  resultado: any;
   cliente: Cliente[] = [];
   clientesDto: ClienteDto[] = [];
   clienteDto: ClienteDto = new ClienteDto();
@@ -29,7 +30,7 @@ export class PlatilloComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarPlatillosPorIdDeCategoria();
-   /*  this.listarClientePorId(); */
+    this.listarClientePorId();
   }
 
   listarPlatillosPorIdDeCategoria() {
@@ -127,21 +128,18 @@ export class PlatilloComponent implements OnInit {
   }
 
   
-  /* listarClientePorId() {
+  listarClientePorId() {
     const id = localStorage.getItem('ClienteAgregado');
-    this.meseroService.listarClientePorId(+id).
-    subscribe(
-      {
-        next: (serviceResponse: ServiceResponseCliente) =>{
-          this.clientesDto = serviceResponse.data 
-          },
+    this.meseroService.listarClientePorId(+id).subscribe({
+      next: (response: any) => {
+        this.resultado = response.data;
       },
-      (error) => {
+      error: (error) => {
         console.log(error); // Maneja el error si es necesario
-        console.log("ERROR");
+        console.log("error");        
       }
-    );
-  } */
+    });
+  }
   
   
   agregarCliente(event: Event) {
@@ -159,5 +157,6 @@ export class PlatilloComponent implements OnInit {
           console.log("ERROR")
         }
       });
+      window.location.reload();
   }
 }

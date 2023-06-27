@@ -188,13 +188,13 @@
 			</div>
 
 			<div class=" col-md-3 bg-light">
-				<div class="mt-3 row d-flex justify-content-center align-items-center">
-					<div class="col-1">
+				<div class="mt-3 row d-flex justify-content-center align-items-center" >
+					<div class="col-2">
 						<img src="assets/img/perfil_categoria.png" alt="" width="40" height="40">
 					</div>
-					<div class="col-8">
-						<div *ngFor="let cliente of clientesDto">
-							<h5>{{ cliente.nombreCliente}}</h5>
+					<div class="col-7 mt-2">
+						<div *ngIf="resultado" >
+							<h6>{{ resultado.nombreCliente}}</h6>
 						</div>
 					</div>
 					<div class=" col-2 d-flex justify-content-center align-items-center" style="margin-left: 2%;">
