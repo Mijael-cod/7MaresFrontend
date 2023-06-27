@@ -127,110 +127,62 @@
 					</div>
 				</div>
 
+				<!-- Modal -->
+				<div class="modal fade mt-5" id="ModalCliente" tabindex="-1" aria-labelledby="exampleModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<form (ngSubmit)="agregarCliente($event)">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5 txt-c" id="exampleModalLabel">Agregar Cliente</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+									<input type="text" [(ngModel)]="clienteDto.nombreCliente" name="nombreCliente"
+										class="form-control" id="exampleFormControlInput1">
+								</div>
+								<div class="modal-footer boton-new">
+									<button type="button" class="btn btn-danger bt-n btn-2"
+										data-bs-dismiss="modal">Salir</button>
+
+									<button type="submit" class="btn btn-success bt-n btn-1"
+										data-bs-dismiss="modal">Guardar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
 
 			</div>
 
 
 			<div class=" col-md-3 bg-light">
-				<div class="mt-3 row d-flex justify-content-center align-items-center">
-					<div class="col-1">
+				<div class="mt-3 row d-flex justify-content-center align-items-center" >
+					<div class="col-2">
 						<img src="assets/img/perfil_categoria.png" alt="" width="40" height="40">
 					</div>
-					<div class="col-8">
-						<input type="text" class="form-control"
-							style="border-radius: 0px !important; border-color: transparent !important; background-color: transparent !important">
+					<div class="col-7 mt-2">
+						<div *ngIf="resultado" >
+							<h6>{{ resultado.nombreCliente}}</h6>
+						</div>
 					</div>
 					<div class=" col-2 d-flex justify-content-center align-items-center" style="margin-left: 2%;">
 						<div class="iconos3">
 							<i class="fa-solid fa-pen"></i>
 						</div>
-						<div class="iconos3" style="margin-left: 20%;">
-							<i class="fa-solid fa-trash"></i>
+						<div type="button" class="iconos3" style="margin-left: 20%;">
+							<i class="fa-solid fa-plus" data-bs-toggle="modal" data-bs-target="#ModalCliente"></i>
 						</div>
 					</div>
 				</div>
 
 				<hr>
 
-				<div class="container-fluid col-md-12 contenedor" style="height:65%;">
-					<div class="col-md-12 d-flex justify-content-center align-items-center">
-						<div class="col-md-1">
-							<i class="fa-solid fa-circle" style="font-size: 60%;"></i>
-						</div>
-						<div class="col-md-6">
-							<input type="text" class="form-control"
-								style="height: 20%; border-radius: 0px !important; border-color: transparent !important; background-color: transparent !important">
-							<input type="text" class="form-control"
-								style=" height: 20%; border-radius: 0px !important; border-color: transparent !important; background-color: transparent !important">
-						</div>
-						<div class="col-md-1">
-							<button id='disminuir' onclick="disminuir()">-</button>
-						</div>
-						<div class="col-md-2">
-							<input type='text' id="cantidad" value="0"
-								style=" width: 95%; border-radius: 0px !important; background-color: transparent !important">
-
-						</div>
-						<div class="col-md-1">
-							<button id='aumentar' onclick="aumentar()">+</button>
-						</div>
-						<div class="col-md-1">
-							<i class="fa-solid fa-trash" style="margin-left: 40%; font-size: 110%;"></i>
-						</div>
-					</div>
-					<hr>
-					<div class="col-md-12 d-flex justify-content-center align-items-center">
-						<div class="col-md-1">
-							<i class="fa-solid fa-circle" style="font-size: 60%;"></i>
-						</div>
-						<div class="col-md-6">
-							<input type="text" class="form-control"
-								style="height: 20%; border-radius: 0px !important; border-color: transparent !important; background-color: transparent !important">
-							<input type="text" class="form-control"
-								style=" height: 20%; border-radius: 0px !important; border-color: transparent !important; background-color: transparent !important">
-						</div>
-						<div class="col-md-1">
-							<button id='disminuir' onclick="disminuir()">-</button>
-						</div>
-						<div class="col-md-2">
-							<input type='text' id="cantidad" value="0"
-								style=" width: 95%; border-radius: 0px !important; background-color: transparent !important">
-
-						</div>
-						<div class="col-md-1">
-							<button id='aumentar' onclick="aumentar()">+</button>
-						</div>
-						<div class="col-md-1">
-							<i class="fa-solid fa-trash" style="margin-left: 40%; font-size: 110%;"></i>
-						</div>
-					</div>
-					<hr>
-					<div class="col-md-12 d-flex justify-content-center align-items-center">
-						<div class="col-md-1">
-							<i class="fa-solid fa-circle" style="font-size: 60%;"></i>
-						</div>
-						<div class="col-md-6">
-							<input type="text" class="form-control"
-								style="height: 20%; border-radius: 0px !important; border-color: transparent !important; background-color: transparent !important">
-							<input type="text" class="form-control"
-								style=" height: 20%; border-radius: 0px !important; border-color: transparent !important; background-color: transparent !important">
-						</div>
-						<div class="col-md-1">
-							<button id='disminuir' onclick="disminuir()">-</button>
-						</div>
-						<div class="col-md-2">
-							<input type='text' id="cantidad" value="0"
-								style=" width: 95%; border-radius: 0px !important; background-color: transparent !important">
-
-						</div>
-						<div class="col-md-1">
-							<button id='aumentar' onclick="aumentar()">+</button>
-						</div>
-						<div class="col-md-1">
-							<i class="fa-solid fa-trash" style="margin-left: 40%; font-size: 110%;"></i>
-						</div>
-					</div>
-					<hr>
+				<div class="container-fluid col-md-12 contenedor" style="height:75%;">				
+					
 
 				</div>
 

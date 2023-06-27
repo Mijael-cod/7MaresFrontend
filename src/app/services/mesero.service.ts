@@ -66,9 +66,8 @@ export class MeseroService {
     return this.http.post(`${this.endpointCliente}/clientes/agregarClientes`, clienteDto)
   }
 
-  listarCliente(){
-    return this.http.get(`${this.endpoint}${this.endpointMSCliente}/clientes/listarClientes`);
+  listarClientePorId(idClienteAgregado: number) {
+    return this.http.get(`${this.endpointCliente}/clientes/listarClientePorId/${idClienteAgregado}`);
   }
-
 
 }

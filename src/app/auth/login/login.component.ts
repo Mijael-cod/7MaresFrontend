@@ -17,5 +17,8 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/recuperar-contra'])
   }
 
-  
+  irAdminPanel(){
+    this.router.navigate(['/admin-panel'])
+  }
+
 }
