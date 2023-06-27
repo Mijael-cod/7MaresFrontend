@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+  }
+  
+  .header {
+    flex: 0 0 auto;
+    /* Estilos adicionales para el encabezado */
+  }
+  
+  .sidebar {
+    flex: 0 0 auto;
+    /* Estilos adicionales para la barra lateral */
+  }
+  
+  .content {
+    flex: 1;
+    /* Estilos adicionales para el área de contenido principal */
+  }

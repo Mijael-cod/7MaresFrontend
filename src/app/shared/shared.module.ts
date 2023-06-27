@@ -5,6 +5,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { PanelAdministradorComponent } from './panel-administrador/panel-administrador.component';
 import { MeseroPanelComponent } from './mesero-panel/mesero-panel.component';
+import { SidebarMeseroComponent } from './sidebar-mesero/sidebar-mesero.component';
 
 
 
@@ -14,6 +15,7 @@ import { MeseroPanelComponent } from './mesero-panel/mesero-panel.component';
     SidebarComponent,
     PanelAdministradorComponent,
     MeseroPanelComponent,
+    SidebarMeseroComponent,
   ],
   imports: [
     CommonModule,
