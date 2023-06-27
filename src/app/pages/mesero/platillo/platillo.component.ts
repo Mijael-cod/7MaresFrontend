@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ServiceResponse } from 'src/app/interfaces/ServiceResponse .interface';
+import { ServiceResponse, ServiceResponseCliente } from 'src/app/interfaces/ServiceResponse .interface';
 import { Cliente } from 'src/app/models/Cliente.model';
 import { ClienteDto } from 'src/app/models/ClienteDto.model';
 import { Platillos } from 'src/app/models/Platillos.model';
@@ -29,6 +29,7 @@ export class PlatilloComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarPlatillosPorIdDeCategoria();
+   /*  this.listarClientePorId(); */
   }
 
   listarPlatillosPorIdDeCategoria() {
@@ -125,45 +126,38 @@ export class PlatilloComponent implements OnInit {
     }
   }
 
+  
+  /* listarClientePorId() {
+    const id = localStorage.getItem('ClienteAgregado');
+    this.meseroService.listarClientePorId(+id).
+    subscribe(
+      {
+        next: (serviceResponse: ServiceResponseCliente) =>{
+          this.clientesDto = serviceResponse.data 
+          },
+      },
+      (error) => {
+        console.log(error); // Maneja el error si es necesario
+        console.log("ERROR");
+      }
+    );
+  } */
+  
+  
   agregarCliente(event: Event) {
+    const id = localStorage.getItem('id');
     this.meseroService.agregarCliente(this.clienteDto)
       .subscribe({
         next: (resp: any) => {
-          console.log(resp);},
+          const idClienteAgregado = resp.data.idCliente;
+          console.log("este es ID  ", +idClienteAgregado)
+          localStorage.setItem('ClienteAgregado', idClienteAgregado);
+          console.log(resp);
+        },
         error: (err) => {
           console.log(err);
+          console.log("ERROR")
         }
       });
-  }
-  
-  /* listarCliente() {
-    const idCliente = localStorage.getItem('idCliente');
-    if (+idCliente) {
-      this.meseroService.listarCliente(+idCliente)
-        .subscribe(
-          {
-            next: (response: any) => {
-              this.cliente = response.data;
-              console.log(this.cliente);
-            },
-            error: (err) => {
-              console.log(err);
-            }
-          }
-        );
-    } else {
-      console.log('No se encontró el ID del cliente en el almacenamiento local.');
-    }
-  } */
-
-  listarCliente() {
-    this.meseroService.listarCliente().subscribe({
-      next: (response: any) => {
-        this.cliente = response.data;
-      },
-      error: (error) => {
-        console.log(error); // Maneja el error de ser necesario
-      }
-    })
   }
 }
