@@ -2,7 +2,8 @@
 	margin: 0;
 	padding: 0;
 	/* background: url(../img/logo7mares.jpg) no-repeat center top; */
-	background-color: antiquewhite;
+	/* background-color: antiquewhite; */
+	background: url("https://img.freepik.com/foto-gratis/diseno-interior-habitacion-minima-vacia-suelo-espina-pescado_53876-128647.jpg?w=1060&t=st=1687492997~exp=1687493597~hmac=aab12554dc36c85fff9a24df97f95762759ce267038e6bf4a9b88ab74b11a012");
 	background-size: cover;
 	font-family: sans-serif;
 	height: 100vh;
@@ -99,3 +100,41 @@
 	width: 150px;
 
 }
+
+
+
+.google-btn {
+  width: 184px;
+  height: 42px;
+  background-color: blue !important;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+}
+  .google-icon-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: white;
+  }
+  .google-icon {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: -8px;
+    width: 18px;
+    height: 18px;
+  }
+  .btn-text {
+    float: right;
+    margin: 11px 11px 0 0;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    font-family: "Roboto";
+  }
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
