@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceResponse } from 'src/app/interfaces/ServiceResponse .interface';
+import { Cliente } from 'src/app/models/Cliente.model';
+import { ClienteDto } from 'src/app/models/ClienteDto.model';
 import { Platillos } from 'src/app/models/Platillos.model';
 import { PlatillosDto } from 'src/app/models/PlatillosDto.model';
 import { MeseroService } from 'src/app/services/mesero.service';
@@ -12,6 +14,9 @@ import { MeseroService } from 'src/app/services/mesero.service';
 })
 export class PlatilloComponent implements OnInit {
 
+  cliente: Cliente[] = [];
+  clientesDto: ClienteDto[] = [];
+  clienteDto: ClienteDto = new ClienteDto();
   platillos: Platillos[] = [];
   platillosDto: PlatillosDto[] = [];
   platilloDto: PlatillosDto = new PlatillosDto();
@@ -109,7 +114,7 @@ export class PlatilloComponent implements OnInit {
       nombrePlatillo: nombrePlatillo,
       costoPlatillo: costoPlatillo
     };
-    
+
     this.etiquetasGeneradas.push(etiqueta);
   }
 
@@ -120,4 +125,45 @@ export class PlatilloComponent implements OnInit {
     }
   }
 
+  agregarCliente(event: Event) {
+    this.meseroService.agregarCliente(this.clienteDto)
+      .subscribe({
+        next: (resp: any) => {
+          console.log(resp);},
+        error: (err) => {
+          console.log(err);
+        }
+      });
+  }
+  
+  /* listarCliente() {
+    const idCliente = localStorage.getItem('idCliente');
+    if (+idCliente) {
+      this.meseroService.listarCliente(+idCliente)
+        .subscribe(
+          {
+            next: (response: any) => {
+              this.cliente = response.data;
+              console.log(this.cliente);
+            },
+            error: (err) => {
+              console.log(err);
+            }
+          }
+        );
+    } else {
+      console.log('No se encontró el ID del cliente en el almacenamiento local.');
+    }
+  } */
+
+  listarCliente() {
+    this.meseroService.listarCliente().subscribe({
+      next: (response: any) => {
+        this.cliente = response.data;
+      },
+      error: (error) => {
+        console.log(error); // Maneja el error de ser necesario
+      }
+    })
+  }
 }

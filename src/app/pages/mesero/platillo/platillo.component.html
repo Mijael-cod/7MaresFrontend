@@ -157,6 +157,34 @@
 					</div>
 				</div>
 
+				<!-- Modal -->
+				<div class="modal fade mt-5" id="ModalCliente" tabindex="-1" aria-labelledby="exampleModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<form (ngSubmit)="agregarCliente($event)">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5 txt-c" id="exampleModalLabel">Agregar Cliente</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+									<input type="text" [(ngModel)]="clienteDto.nombreCliente" name="nombreCliente"
+										class="form-control" id="exampleFormControlInput1">
+								</div>
+								<div class="modal-footer boton-new">
+									<button type="button" class="btn btn-danger bt-n btn-2"
+										data-bs-dismiss="modal">Salir</button>
+
+									<button type="submit" class="btn btn-success bt-n btn-1"
+										data-bs-dismiss="modal">Guardar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
 			</div>
 
 			<div class=" col-md-3 bg-light">
@@ -165,15 +193,17 @@
 						<img src="assets/img/perfil_categoria.png" alt="" width="40" height="40">
 					</div>
 					<div class="col-8">
-						<input type="text" class="form-control"
-							style="border-radius: 0px !important; border-color: transparent !important; background-color: transparent !important">
-					</div>
+						<div *ngFor="let cliente of cliente">
+						  <h5>{{ cliente.nombreCliente }}</h5>
+						</div>
+					  </div>
 					<div class=" col-2 d-flex justify-content-center align-items-center" style="margin-left: 2%;">
 						<div class="iconos3">
 							<i class="fa-solid fa-pen"></i>
 						</div>
-						<div class="iconos3" style="margin-left: 20%;">
-							<i class="fa-solid fa-trash"></i>
+						<div type="button" class="iconos3" style="margin-left: 20%;">
+							<i class="fa-solid fa-plus" data-bs-toggle="modal"
+							data-bs-target="#ModalCliente"></i>
 						</div>
 					</div>
 				</div>
@@ -204,7 +234,7 @@
 						</div>
 						<div class="col-md-1" (click)="eliminarEtiqueta(etiqueta)">
 							<i class="fas fa-trash" type="button" style="margin-left: 40%; font-size: 110%;"></i>
-						</div>						
+						</div>
 					</div>
 
 				</div>

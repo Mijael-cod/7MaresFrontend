@@ -5,48 +5,70 @@ import { CategoriaDto } from '../models/CategoriaDto.model';
 import { PlatillosDto } from '../models/PlatillosDto.model';
 import { ServiceResponse } from '../interfaces/ServiceResponse .interface';
 import { Observable } from 'rxjs';
+import { ClienteDto } from '../models/ClienteDto.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MeseroService {
 
-  endpoint: string = "http://localhost:8083/negocio";
+  endpoint: string = "http://localhost:8891";  
+  endpointMSCliente: string = "/ms-ventas-gestion-clientes/negocio";
+  endpointCliente: string = "http://localhost:8081/negocio"
+  endpointMSPlatillos: string = "/ms-ventas-gestion-platillos/negocio";
+  endpointPlatillos: string = "http://localhost:8083/negocio"
 
   constructor(private http: HttpClient) { }
 
   listarCategorias() {
-    return this.http.get<Categorias[]>(`${this.endpoint}/categorias/listarCategorias`);
+    return this.http.get<Categorias[]>(`${this.endpoint}${this.endpointMSPlatillos}/categorias/listarCategorias`);
   }
 
   agregarCategoria(categoriaDto: CategoriaDto) {
-    return this.http.post(`${this.endpoint}/categorias/agregarCategorias`, categoriaDto)
+    return this.http.post(`${this.endpointPlatillos}/categorias/agregarCategorias`, categoriaDto);
   }
-
+ 
+ 
   editarCategoria(categoriaDto: CategoriaDto, id: number) {
-    return this.http.put<CategoriaDto>(`${this.endpoint}/categorias/editarCategoria/${id}`, categoriaDto);
+    return this.http.put<CategoriaDto>(`${this.endpointPlatillos}/categorias/editarCategoria/${id}`, categoriaDto);
   }
 
   eliminarCategoria(idCategoria: number) {
-    return this.http.delete(`${this.endpoint}/categorias/eliminarCategoria/${idCategoria}`)
+    return this.http.delete(`${this.endpointPlatillos}/categorias/eliminarCategoria/${idCategoria}`)
   }
+
+
+
 
 
 
 
   listarPlatillosPorIdCategoria(idCategoria: number) {
-    return this.http.get(`${this.endpoint}/platillos/listarPlatillosPorIdDeCategoria/${idCategoria}`);
+    return this.http.get(`${this.endpoint}${this.endpointMSPlatillos}/platillos/listarPlatillosPorIdDeCategoria/${idCategoria}`);
   }
 
   agregarPlatillos(platillosDto: PlatillosDto) {
-    return this.http.post(`${this.endpoint}/platillos/agregarPlatillos`, platillosDto)
+    return this.http.post(`${this.endpointPlatillos}/platillos/agregarPlatillos`, platillosDto)
   }
 
   editarPlatillo(platillosDto: PlatillosDto, id: number) {
-    return this.http.put<PlatillosDto>(`${this.endpoint}/platillos/editarPlatillo/${id}`, platillosDto);
+    return this.http.put<PlatillosDto>(`${this.endpointPlatillos}/platillos/editarPlatillo/${id}`, platillosDto);
   }
 
   eliminarPlatillo(idPlatillo: number){
-    return this.http.delete(`${this.endpoint}/platillos/eliminarPlatillo/${idPlatillo}`)
+    return this.http.delete(`${this.endpointPlatillos}/platillos/eliminarPlatillo/${idPlatillo}`)
   }
+
+
+
+
+  agregarCliente(clienteDto: ClienteDto){
+    return this.http.post(`${this.endpointCliente}/clientes/agregarClientes`, clienteDto)
+  }
+
+  listarCliente(){
+    return this.http.get(`${this.endpoint}${this.endpointMSCliente}/clientes/listarClientes`);
+  }
+
+
 }

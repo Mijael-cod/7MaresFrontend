@@ -5,7 +5,6 @@ export class CategoriaDto{
 
     constructor(){
         this.estadoCategoria=1;
-        this.nombreCategoria=this.nombreCategoria;
         
     }
 }
