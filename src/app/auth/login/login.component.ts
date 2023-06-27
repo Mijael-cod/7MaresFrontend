@@ -17,4 +17,5 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/recuperar-contra'])
   }
 
+  
 }
